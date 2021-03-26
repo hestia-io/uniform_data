@@ -1,0 +1,60 @@
+syntax = 'proto3';
+
+message PageInfo {
+  int32 totalResults = 1;
+  int32 resultsPerPage = 2;
+}
+
+message Product {
+  message Price {
+    string value = 1;
+    string currency = 2;
+  }
+
+  message Tax {
+    double rate = 1;
+    string country = 2;
+    string region = 3;
+    bool taxShip = 4;
+    string locationId = 5;
+    string postalCode = 6;
+  }
+
+  message Snippet {
+    string title = 1;
+    string description = 2;
+    string link = 3;
+    string imageLink = 4;
+    string itemGroupId = 5;
+    Price price = 6;
+    Price salePrice = 7;
+  }
+
+  message ContentDetails {
+    repeated string additionalImageLinks = 1;
+    repeated Tax taxes = 2;
+    int32 Quantity = 3;
+  }
+
+  /// product kind domain#product,
+  /// like hestia#product.
+  string kind = 1;
+
+  /// A unique identifier for the product, 
+  /// use the product's SKU where possible.
+  string id = 2;
+
+  /// The snippet object contains basic details about product.
+  Snippet snippet = 3;
+
+  /// The content details contains information about the product content. 
+  ContentDetails contentDetails = 4;
+}
+
+message ProductListResponse {
+  string kind = 1;
+  string nextPageToken = 2;
+  string prevPageToken = 3;
+  PageInfo pageInfo = 4;  
+  repeated Product items = 5;
+}
