@@ -1170,67 +1170,6 @@ class VendorListResponse extends $pb.GeneratedMessage {
   $core.List<Vendor> get items => $_getList(5);
 }
 
-class ProductPrice extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ProductPrice', createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'value')
-    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'currency')
-    ..hasRequiredFields = false
-  ;
-
-  ProductPrice._() : super();
-  factory ProductPrice({
-    $core.String? value,
-    $core.String? currency,
-  }) {
-    final _result = create();
-    if (value != null) {
-      _result.value = value;
-    }
-    if (currency != null) {
-      _result.currency = currency;
-    }
-    return _result;
-  }
-  factory ProductPrice.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory ProductPrice.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  ProductPrice clone() => ProductPrice()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  ProductPrice copyWith(void Function(ProductPrice) updates) => super.copyWith((message) => updates(message as ProductPrice)) as ProductPrice; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static ProductPrice create() => ProductPrice._();
-  ProductPrice createEmptyInstance() => create();
-  static $pb.PbList<ProductPrice> createRepeated() => $pb.PbList<ProductPrice>();
-  @$core.pragma('dart2js:noInline')
-  static ProductPrice getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ProductPrice>(create);
-  static ProductPrice? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.String get value => $_getSZ(0);
-  @$pb.TagNumber(1)
-  set value($core.String v) { $_setString(0, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasValue() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearValue() => clearField(1);
-
-  @$pb.TagNumber(2)
-  $core.String get currency => $_getSZ(1);
-  @$pb.TagNumber(2)
-  set currency($core.String v) { $_setString(1, v); }
-  @$pb.TagNumber(2)
-  $core.bool hasCurrency() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearCurrency() => clearField(2);
-}
-
 class ProductTax extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ProductTax', createEmptyInstance: create)
     ..a<$core.double>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'rate', $pb.PbFieldType.OD)
@@ -1355,8 +1294,9 @@ class ProductSnippet extends $pb.GeneratedMessage {
     ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'link')
     ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'imageLink', protoName: 'imageLink')
     ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'itemGroupId', protoName: 'itemGroupId')
-    ..aOM<ProductPrice>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'price', subBuilder: ProductPrice.create)
-    ..aOM<ProductPrice>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'salePrice', protoName: 'salePrice', subBuilder: ProductPrice.create)
+    ..aOM<Price>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'price', subBuilder: Price.create)
+    ..aOM<Price>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'salePrice', protoName: 'salePrice', subBuilder: Price.create)
+    ..aOM<Price>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'costOfGoodsSold', protoName: 'costOfGoodsSold', subBuilder: Price.create)
     ..hasRequiredFields = false
   ;
 
@@ -1367,8 +1307,9 @@ class ProductSnippet extends $pb.GeneratedMessage {
     $core.String? link,
     $core.String? imageLink,
     $core.String? itemGroupId,
-    ProductPrice? price,
-    ProductPrice? salePrice,
+    Price? price,
+    Price? salePrice,
+    Price? costOfGoodsSold,
   }) {
     final _result = create();
     if (title != null) {
@@ -1391,6 +1332,9 @@ class ProductSnippet extends $pb.GeneratedMessage {
     }
     if (salePrice != null) {
       _result.salePrice = salePrice;
+    }
+    if (costOfGoodsSold != null) {
+      _result.costOfGoodsSold = costOfGoodsSold;
     }
     return _result;
   }
@@ -1461,26 +1405,37 @@ class ProductSnippet extends $pb.GeneratedMessage {
   void clearItemGroupId() => clearField(5);
 
   @$pb.TagNumber(6)
-  ProductPrice get price => $_getN(5);
+  Price get price => $_getN(5);
   @$pb.TagNumber(6)
-  set price(ProductPrice v) { setField(6, v); }
+  set price(Price v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasPrice() => $_has(5);
   @$pb.TagNumber(6)
   void clearPrice() => clearField(6);
   @$pb.TagNumber(6)
-  ProductPrice ensurePrice() => $_ensure(5);
+  Price ensurePrice() => $_ensure(5);
 
   @$pb.TagNumber(7)
-  ProductPrice get salePrice => $_getN(6);
+  Price get salePrice => $_getN(6);
   @$pb.TagNumber(7)
-  set salePrice(ProductPrice v) { setField(7, v); }
+  set salePrice(Price v) { setField(7, v); }
   @$pb.TagNumber(7)
   $core.bool hasSalePrice() => $_has(6);
   @$pb.TagNumber(7)
   void clearSalePrice() => clearField(7);
   @$pb.TagNumber(7)
-  ProductPrice ensureSalePrice() => $_ensure(6);
+  Price ensureSalePrice() => $_ensure(6);
+
+  @$pb.TagNumber(8)
+  Price get costOfGoodsSold => $_getN(7);
+  @$pb.TagNumber(8)
+  set costOfGoodsSold(Price v) { setField(8, v); }
+  @$pb.TagNumber(8)
+  $core.bool hasCostOfGoodsSold() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearCostOfGoodsSold() => clearField(8);
+  @$pb.TagNumber(8)
+  Price ensureCostOfGoodsSold() => $_ensure(7);
 }
 
 class ProductContentDetails extends $pb.GeneratedMessage {

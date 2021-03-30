@@ -99,11 +99,6 @@ message VendorListResponse {
 }
 
 /// Products
-message ProductPrice {
-  string value = 1;
-  string currency = 2;
-}
-
 message ProductTax {
   double rate = 1;
   string country = 2;
@@ -119,8 +114,9 @@ message ProductSnippet {
   string link = 3;
   string imageLink = 4;
   string itemGroupId = 5;
-  ProductPrice price = 6;
-  ProductPrice salePrice = 7;
+  Price price = 6;
+  Price salePrice = 7;
+  Price costOfGoodsSold = 8;
 }
 
 message ProductContentDetails {
