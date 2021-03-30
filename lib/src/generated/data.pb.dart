@@ -9,6 +9,10 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+import 'data.pbenum.dart';
+
+export 'data.pbenum.dart';
+
 class PageInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'PageInfo', createEmptyInstance: create)
     ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'totalResults', $pb.PbFieldType.O3, protoName: 'totalResults')
@@ -70,15 +74,84 @@ class PageInfo extends $pb.GeneratedMessage {
   void clearResultsPerPage() => clearField(2);
 }
 
-class Product_Price extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Product.Price', createEmptyInstance: create)
+class CustomAttribute extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CustomAttribute', createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'value')
+    ..pc<CustomAttribute>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'groupValues', $pb.PbFieldType.PM, protoName: 'groupValues', subBuilder: CustomAttribute.create)
+    ..hasRequiredFields = false
+  ;
+
+  CustomAttribute._() : super();
+  factory CustomAttribute({
+    $core.String? name,
+    $core.String? value,
+    $core.Iterable<CustomAttribute>? groupValues,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    if (value != null) {
+      _result.value = value;
+    }
+    if (groupValues != null) {
+      _result.groupValues.addAll(groupValues);
+    }
+    return _result;
+  }
+  factory CustomAttribute.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CustomAttribute.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  CustomAttribute clone() => CustomAttribute()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  CustomAttribute copyWith(void Function(CustomAttribute) updates) => super.copyWith((message) => updates(message as CustomAttribute)) as CustomAttribute; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static CustomAttribute create() => CustomAttribute._();
+  CustomAttribute createEmptyInstance() => create();
+  static $pb.PbList<CustomAttribute> createRepeated() => $pb.PbList<CustomAttribute>();
+  @$core.pragma('dart2js:noInline')
+  static CustomAttribute getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CustomAttribute>(create);
+  static CustomAttribute? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get value => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set value($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasValue() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearValue() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.List<CustomAttribute> get groupValues => $_getList(2);
+}
+
+class Price extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Price', createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'value')
     ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'currency')
     ..hasRequiredFields = false
   ;
 
-  Product_Price._() : super();
-  factory Product_Price({
+  Price._() : super();
+  factory Price({
     $core.String? value,
     $core.String? currency,
   }) {
@@ -91,26 +164,26 @@ class Product_Price extends $pb.GeneratedMessage {
     }
     return _result;
   }
-  factory Product_Price.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Product_Price.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory Price.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Price.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  Product_Price clone() => Product_Price()..mergeFromMessage(this);
+  Price clone() => Price()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Product_Price copyWith(void Function(Product_Price) updates) => super.copyWith((message) => updates(message as Product_Price)) as Product_Price; // ignore: deprecated_member_use
+  Price copyWith(void Function(Price) updates) => super.copyWith((message) => updates(message as Price)) as Price; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static Product_Price create() => Product_Price._();
-  Product_Price createEmptyInstance() => create();
-  static $pb.PbList<Product_Price> createRepeated() => $pb.PbList<Product_Price>();
+  static Price create() => Price._();
+  Price createEmptyInstance() => create();
+  static $pb.PbList<Price> createRepeated() => $pb.PbList<Price>();
   @$core.pragma('dart2js:noInline')
-  static Product_Price getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Product_Price>(create);
-  static Product_Price? _defaultInstance;
+  static Price getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Price>(create);
+  static Price? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get value => $_getSZ(0);
@@ -131,8 +204,1035 @@ class Product_Price extends $pb.GeneratedMessage {
   void clearCurrency() => clearField(2);
 }
 
-class Product_Tax extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Product.Tax', createEmptyInstance: create)
+class WarehouseSnippet extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'WarehouseSnippet', createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'title')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'description')
+    ..hasRequiredFields = false
+  ;
+
+  WarehouseSnippet._() : super();
+  factory WarehouseSnippet({
+    $core.String? title,
+    $core.String? description,
+  }) {
+    final _result = create();
+    if (title != null) {
+      _result.title = title;
+    }
+    if (description != null) {
+      _result.description = description;
+    }
+    return _result;
+  }
+  factory WarehouseSnippet.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory WarehouseSnippet.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  WarehouseSnippet clone() => WarehouseSnippet()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  WarehouseSnippet copyWith(void Function(WarehouseSnippet) updates) => super.copyWith((message) => updates(message as WarehouseSnippet)) as WarehouseSnippet; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static WarehouseSnippet create() => WarehouseSnippet._();
+  WarehouseSnippet createEmptyInstance() => create();
+  static $pb.PbList<WarehouseSnippet> createRepeated() => $pb.PbList<WarehouseSnippet>();
+  @$core.pragma('dart2js:noInline')
+  static WarehouseSnippet getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<WarehouseSnippet>(create);
+  static WarehouseSnippet? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get title => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set title($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasTitle() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearTitle() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get description => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set description($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasDescription() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearDescription() => clearField(2);
+}
+
+class WarehouseContentDetails extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'WarehouseContentDetails', createEmptyInstance: create)
+    ..pc<CustomAttribute>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'customAttributes', $pb.PbFieldType.PM, protoName: 'customAttributes', subBuilder: CustomAttribute.create)
+    ..hasRequiredFields = false
+  ;
+
+  WarehouseContentDetails._() : super();
+  factory WarehouseContentDetails({
+    $core.Iterable<CustomAttribute>? customAttributes,
+  }) {
+    final _result = create();
+    if (customAttributes != null) {
+      _result.customAttributes.addAll(customAttributes);
+    }
+    return _result;
+  }
+  factory WarehouseContentDetails.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory WarehouseContentDetails.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  WarehouseContentDetails clone() => WarehouseContentDetails()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  WarehouseContentDetails copyWith(void Function(WarehouseContentDetails) updates) => super.copyWith((message) => updates(message as WarehouseContentDetails)) as WarehouseContentDetails; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static WarehouseContentDetails create() => WarehouseContentDetails._();
+  WarehouseContentDetails createEmptyInstance() => create();
+  static $pb.PbList<WarehouseContentDetails> createRepeated() => $pb.PbList<WarehouseContentDetails>();
+  @$core.pragma('dart2js:noInline')
+  static WarehouseContentDetails getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<WarehouseContentDetails>(create);
+  static WarehouseContentDetails? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<CustomAttribute> get customAttributes => $_getList(0);
+}
+
+class Warehouse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Warehouse', createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'kind')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'etag')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
+    ..aOM<WarehouseSnippet>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'snippet', subBuilder: WarehouseSnippet.create)
+    ..aOM<WarehouseContentDetails>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'contentDetails', protoName: 'contentDetails', subBuilder: WarehouseContentDetails.create)
+    ..hasRequiredFields = false
+  ;
+
+  Warehouse._() : super();
+  factory Warehouse({
+    $core.String? kind,
+    $core.String? etag,
+    $core.String? id,
+    WarehouseSnippet? snippet,
+    WarehouseContentDetails? contentDetails,
+  }) {
+    final _result = create();
+    if (kind != null) {
+      _result.kind = kind;
+    }
+    if (etag != null) {
+      _result.etag = etag;
+    }
+    if (id != null) {
+      _result.id = id;
+    }
+    if (snippet != null) {
+      _result.snippet = snippet;
+    }
+    if (contentDetails != null) {
+      _result.contentDetails = contentDetails;
+    }
+    return _result;
+  }
+  factory Warehouse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Warehouse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  Warehouse clone() => Warehouse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Warehouse copyWith(void Function(Warehouse) updates) => super.copyWith((message) => updates(message as Warehouse)) as Warehouse; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static Warehouse create() => Warehouse._();
+  Warehouse createEmptyInstance() => create();
+  static $pb.PbList<Warehouse> createRepeated() => $pb.PbList<Warehouse>();
+  @$core.pragma('dart2js:noInline')
+  static Warehouse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Warehouse>(create);
+  static Warehouse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get kind => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set kind($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasKind() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearKind() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get etag => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set etag($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasEtag() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearEtag() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get id => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set id($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasId() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearId() => clearField(3);
+
+  @$pb.TagNumber(4)
+  WarehouseSnippet get snippet => $_getN(3);
+  @$pb.TagNumber(4)
+  set snippet(WarehouseSnippet v) { setField(4, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasSnippet() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearSnippet() => clearField(4);
+  @$pb.TagNumber(4)
+  WarehouseSnippet ensureSnippet() => $_ensure(3);
+
+  @$pb.TagNumber(5)
+  WarehouseContentDetails get contentDetails => $_getN(4);
+  @$pb.TagNumber(5)
+  set contentDetails(WarehouseContentDetails v) { setField(5, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasContentDetails() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearContentDetails() => clearField(5);
+  @$pb.TagNumber(5)
+  WarehouseContentDetails ensureContentDetails() => $_ensure(4);
+}
+
+class WarehouseListResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'WarehouseListResponse', createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'kind')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'etag')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'nextPageToken', protoName: 'nextPageToken')
+    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'prevPageToken', protoName: 'prevPageToken')
+    ..aOM<PageInfo>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'pageInfo', protoName: 'pageInfo', subBuilder: PageInfo.create)
+    ..pc<Warehouse>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'items', $pb.PbFieldType.PM, subBuilder: Warehouse.create)
+    ..hasRequiredFields = false
+  ;
+
+  WarehouseListResponse._() : super();
+  factory WarehouseListResponse({
+    $core.String? kind,
+    $core.String? etag,
+    $core.String? nextPageToken,
+    $core.String? prevPageToken,
+    PageInfo? pageInfo,
+    $core.Iterable<Warehouse>? items,
+  }) {
+    final _result = create();
+    if (kind != null) {
+      _result.kind = kind;
+    }
+    if (etag != null) {
+      _result.etag = etag;
+    }
+    if (nextPageToken != null) {
+      _result.nextPageToken = nextPageToken;
+    }
+    if (prevPageToken != null) {
+      _result.prevPageToken = prevPageToken;
+    }
+    if (pageInfo != null) {
+      _result.pageInfo = pageInfo;
+    }
+    if (items != null) {
+      _result.items.addAll(items);
+    }
+    return _result;
+  }
+  factory WarehouseListResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory WarehouseListResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  WarehouseListResponse clone() => WarehouseListResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  WarehouseListResponse copyWith(void Function(WarehouseListResponse) updates) => super.copyWith((message) => updates(message as WarehouseListResponse)) as WarehouseListResponse; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static WarehouseListResponse create() => WarehouseListResponse._();
+  WarehouseListResponse createEmptyInstance() => create();
+  static $pb.PbList<WarehouseListResponse> createRepeated() => $pb.PbList<WarehouseListResponse>();
+  @$core.pragma('dart2js:noInline')
+  static WarehouseListResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<WarehouseListResponse>(create);
+  static WarehouseListResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get kind => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set kind($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasKind() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearKind() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get etag => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set etag($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasEtag() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearEtag() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get nextPageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set nextPageToken($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasNextPageToken() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearNextPageToken() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get prevPageToken => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set prevPageToken($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasPrevPageToken() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearPrevPageToken() => clearField(4);
+
+  @$pb.TagNumber(5)
+  PageInfo get pageInfo => $_getN(4);
+  @$pb.TagNumber(5)
+  set pageInfo(PageInfo v) { setField(5, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasPageInfo() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearPageInfo() => clearField(5);
+  @$pb.TagNumber(5)
+  PageInfo ensurePageInfo() => $_ensure(4);
+
+  @$pb.TagNumber(6)
+  $core.List<Warehouse> get items => $_getList(5);
+}
+
+class CustomerSnippet extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CustomerSnippet', createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'title')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'description')
+    ..hasRequiredFields = false
+  ;
+
+  CustomerSnippet._() : super();
+  factory CustomerSnippet({
+    $core.String? title,
+    $core.String? description,
+  }) {
+    final _result = create();
+    if (title != null) {
+      _result.title = title;
+    }
+    if (description != null) {
+      _result.description = description;
+    }
+    return _result;
+  }
+  factory CustomerSnippet.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CustomerSnippet.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  CustomerSnippet clone() => CustomerSnippet()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  CustomerSnippet copyWith(void Function(CustomerSnippet) updates) => super.copyWith((message) => updates(message as CustomerSnippet)) as CustomerSnippet; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static CustomerSnippet create() => CustomerSnippet._();
+  CustomerSnippet createEmptyInstance() => create();
+  static $pb.PbList<CustomerSnippet> createRepeated() => $pb.PbList<CustomerSnippet>();
+  @$core.pragma('dart2js:noInline')
+  static CustomerSnippet getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CustomerSnippet>(create);
+  static CustomerSnippet? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get title => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set title($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasTitle() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearTitle() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get description => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set description($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasDescription() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearDescription() => clearField(2);
+}
+
+class CustomerContentDetails extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CustomerContentDetails', createEmptyInstance: create)
+    ..pc<CustomAttribute>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'customAttributes', $pb.PbFieldType.PM, protoName: 'customAttributes', subBuilder: CustomAttribute.create)
+    ..hasRequiredFields = false
+  ;
+
+  CustomerContentDetails._() : super();
+  factory CustomerContentDetails({
+    $core.Iterable<CustomAttribute>? customAttributes,
+  }) {
+    final _result = create();
+    if (customAttributes != null) {
+      _result.customAttributes.addAll(customAttributes);
+    }
+    return _result;
+  }
+  factory CustomerContentDetails.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CustomerContentDetails.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  CustomerContentDetails clone() => CustomerContentDetails()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  CustomerContentDetails copyWith(void Function(CustomerContentDetails) updates) => super.copyWith((message) => updates(message as CustomerContentDetails)) as CustomerContentDetails; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static CustomerContentDetails create() => CustomerContentDetails._();
+  CustomerContentDetails createEmptyInstance() => create();
+  static $pb.PbList<CustomerContentDetails> createRepeated() => $pb.PbList<CustomerContentDetails>();
+  @$core.pragma('dart2js:noInline')
+  static CustomerContentDetails getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CustomerContentDetails>(create);
+  static CustomerContentDetails? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<CustomAttribute> get customAttributes => $_getList(0);
+}
+
+class Customer extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Customer', createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'kind')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'etag')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
+    ..aOM<CustomerSnippet>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'snippet', subBuilder: CustomerSnippet.create)
+    ..aOM<CustomerContentDetails>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'contentDetails', protoName: 'contentDetails', subBuilder: CustomerContentDetails.create)
+    ..hasRequiredFields = false
+  ;
+
+  Customer._() : super();
+  factory Customer({
+    $core.String? kind,
+    $core.String? etag,
+    $core.String? id,
+    CustomerSnippet? snippet,
+    CustomerContentDetails? contentDetails,
+  }) {
+    final _result = create();
+    if (kind != null) {
+      _result.kind = kind;
+    }
+    if (etag != null) {
+      _result.etag = etag;
+    }
+    if (id != null) {
+      _result.id = id;
+    }
+    if (snippet != null) {
+      _result.snippet = snippet;
+    }
+    if (contentDetails != null) {
+      _result.contentDetails = contentDetails;
+    }
+    return _result;
+  }
+  factory Customer.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Customer.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  Customer clone() => Customer()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Customer copyWith(void Function(Customer) updates) => super.copyWith((message) => updates(message as Customer)) as Customer; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static Customer create() => Customer._();
+  Customer createEmptyInstance() => create();
+  static $pb.PbList<Customer> createRepeated() => $pb.PbList<Customer>();
+  @$core.pragma('dart2js:noInline')
+  static Customer getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Customer>(create);
+  static Customer? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get kind => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set kind($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasKind() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearKind() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get etag => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set etag($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasEtag() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearEtag() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get id => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set id($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasId() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearId() => clearField(3);
+
+  @$pb.TagNumber(4)
+  CustomerSnippet get snippet => $_getN(3);
+  @$pb.TagNumber(4)
+  set snippet(CustomerSnippet v) { setField(4, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasSnippet() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearSnippet() => clearField(4);
+  @$pb.TagNumber(4)
+  CustomerSnippet ensureSnippet() => $_ensure(3);
+
+  @$pb.TagNumber(5)
+  CustomerContentDetails get contentDetails => $_getN(4);
+  @$pb.TagNumber(5)
+  set contentDetails(CustomerContentDetails v) { setField(5, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasContentDetails() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearContentDetails() => clearField(5);
+  @$pb.TagNumber(5)
+  CustomerContentDetails ensureContentDetails() => $_ensure(4);
+}
+
+class CustomerListResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CustomerListResponse', createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'kind')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'etag')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'nextPageToken', protoName: 'nextPageToken')
+    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'prevPageToken', protoName: 'prevPageToken')
+    ..aOM<PageInfo>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'pageInfo', protoName: 'pageInfo', subBuilder: PageInfo.create)
+    ..pc<Customer>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'items', $pb.PbFieldType.PM, subBuilder: Customer.create)
+    ..hasRequiredFields = false
+  ;
+
+  CustomerListResponse._() : super();
+  factory CustomerListResponse({
+    $core.String? kind,
+    $core.String? etag,
+    $core.String? nextPageToken,
+    $core.String? prevPageToken,
+    PageInfo? pageInfo,
+    $core.Iterable<Customer>? items,
+  }) {
+    final _result = create();
+    if (kind != null) {
+      _result.kind = kind;
+    }
+    if (etag != null) {
+      _result.etag = etag;
+    }
+    if (nextPageToken != null) {
+      _result.nextPageToken = nextPageToken;
+    }
+    if (prevPageToken != null) {
+      _result.prevPageToken = prevPageToken;
+    }
+    if (pageInfo != null) {
+      _result.pageInfo = pageInfo;
+    }
+    if (items != null) {
+      _result.items.addAll(items);
+    }
+    return _result;
+  }
+  factory CustomerListResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CustomerListResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  CustomerListResponse clone() => CustomerListResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  CustomerListResponse copyWith(void Function(CustomerListResponse) updates) => super.copyWith((message) => updates(message as CustomerListResponse)) as CustomerListResponse; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static CustomerListResponse create() => CustomerListResponse._();
+  CustomerListResponse createEmptyInstance() => create();
+  static $pb.PbList<CustomerListResponse> createRepeated() => $pb.PbList<CustomerListResponse>();
+  @$core.pragma('dart2js:noInline')
+  static CustomerListResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CustomerListResponse>(create);
+  static CustomerListResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get kind => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set kind($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasKind() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearKind() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get etag => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set etag($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasEtag() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearEtag() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get nextPageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set nextPageToken($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasNextPageToken() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearNextPageToken() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get prevPageToken => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set prevPageToken($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasPrevPageToken() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearPrevPageToken() => clearField(4);
+
+  @$pb.TagNumber(5)
+  PageInfo get pageInfo => $_getN(4);
+  @$pb.TagNumber(5)
+  set pageInfo(PageInfo v) { setField(5, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasPageInfo() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearPageInfo() => clearField(5);
+  @$pb.TagNumber(5)
+  PageInfo ensurePageInfo() => $_ensure(4);
+
+  @$pb.TagNumber(6)
+  $core.List<Customer> get items => $_getList(5);
+}
+
+class VendorSnippet extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'VendorSnippet', createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'title')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'description')
+    ..hasRequiredFields = false
+  ;
+
+  VendorSnippet._() : super();
+  factory VendorSnippet({
+    $core.String? title,
+    $core.String? description,
+  }) {
+    final _result = create();
+    if (title != null) {
+      _result.title = title;
+    }
+    if (description != null) {
+      _result.description = description;
+    }
+    return _result;
+  }
+  factory VendorSnippet.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory VendorSnippet.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  VendorSnippet clone() => VendorSnippet()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  VendorSnippet copyWith(void Function(VendorSnippet) updates) => super.copyWith((message) => updates(message as VendorSnippet)) as VendorSnippet; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static VendorSnippet create() => VendorSnippet._();
+  VendorSnippet createEmptyInstance() => create();
+  static $pb.PbList<VendorSnippet> createRepeated() => $pb.PbList<VendorSnippet>();
+  @$core.pragma('dart2js:noInline')
+  static VendorSnippet getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<VendorSnippet>(create);
+  static VendorSnippet? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get title => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set title($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasTitle() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearTitle() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get description => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set description($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasDescription() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearDescription() => clearField(2);
+}
+
+class VendorContentDetails extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'VendorContentDetails', createEmptyInstance: create)
+    ..pc<CustomAttribute>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'customAttributes', $pb.PbFieldType.PM, protoName: 'customAttributes', subBuilder: CustomAttribute.create)
+    ..hasRequiredFields = false
+  ;
+
+  VendorContentDetails._() : super();
+  factory VendorContentDetails({
+    $core.Iterable<CustomAttribute>? customAttributes,
+  }) {
+    final _result = create();
+    if (customAttributes != null) {
+      _result.customAttributes.addAll(customAttributes);
+    }
+    return _result;
+  }
+  factory VendorContentDetails.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory VendorContentDetails.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  VendorContentDetails clone() => VendorContentDetails()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  VendorContentDetails copyWith(void Function(VendorContentDetails) updates) => super.copyWith((message) => updates(message as VendorContentDetails)) as VendorContentDetails; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static VendorContentDetails create() => VendorContentDetails._();
+  VendorContentDetails createEmptyInstance() => create();
+  static $pb.PbList<VendorContentDetails> createRepeated() => $pb.PbList<VendorContentDetails>();
+  @$core.pragma('dart2js:noInline')
+  static VendorContentDetails getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<VendorContentDetails>(create);
+  static VendorContentDetails? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<CustomAttribute> get customAttributes => $_getList(0);
+}
+
+class Vendor extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Vendor', createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'kind')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'etag')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
+    ..aOM<VendorSnippet>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'snippet', subBuilder: VendorSnippet.create)
+    ..aOM<VendorContentDetails>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'contentDetails', protoName: 'contentDetails', subBuilder: VendorContentDetails.create)
+    ..hasRequiredFields = false
+  ;
+
+  Vendor._() : super();
+  factory Vendor({
+    $core.String? kind,
+    $core.String? etag,
+    $core.String? id,
+    VendorSnippet? snippet,
+    VendorContentDetails? contentDetails,
+  }) {
+    final _result = create();
+    if (kind != null) {
+      _result.kind = kind;
+    }
+    if (etag != null) {
+      _result.etag = etag;
+    }
+    if (id != null) {
+      _result.id = id;
+    }
+    if (snippet != null) {
+      _result.snippet = snippet;
+    }
+    if (contentDetails != null) {
+      _result.contentDetails = contentDetails;
+    }
+    return _result;
+  }
+  factory Vendor.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Vendor.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  Vendor clone() => Vendor()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Vendor copyWith(void Function(Vendor) updates) => super.copyWith((message) => updates(message as Vendor)) as Vendor; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static Vendor create() => Vendor._();
+  Vendor createEmptyInstance() => create();
+  static $pb.PbList<Vendor> createRepeated() => $pb.PbList<Vendor>();
+  @$core.pragma('dart2js:noInline')
+  static Vendor getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Vendor>(create);
+  static Vendor? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get kind => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set kind($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasKind() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearKind() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get etag => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set etag($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasEtag() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearEtag() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get id => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set id($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasId() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearId() => clearField(3);
+
+  @$pb.TagNumber(4)
+  VendorSnippet get snippet => $_getN(3);
+  @$pb.TagNumber(4)
+  set snippet(VendorSnippet v) { setField(4, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasSnippet() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearSnippet() => clearField(4);
+  @$pb.TagNumber(4)
+  VendorSnippet ensureSnippet() => $_ensure(3);
+
+  @$pb.TagNumber(5)
+  VendorContentDetails get contentDetails => $_getN(4);
+  @$pb.TagNumber(5)
+  set contentDetails(VendorContentDetails v) { setField(5, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasContentDetails() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearContentDetails() => clearField(5);
+  @$pb.TagNumber(5)
+  VendorContentDetails ensureContentDetails() => $_ensure(4);
+}
+
+class VendorListResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'VendorListResponse', createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'kind')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'etag')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'nextPageToken', protoName: 'nextPageToken')
+    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'prevPageToken', protoName: 'prevPageToken')
+    ..aOM<PageInfo>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'pageInfo', protoName: 'pageInfo', subBuilder: PageInfo.create)
+    ..pc<Vendor>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'items', $pb.PbFieldType.PM, subBuilder: Vendor.create)
+    ..hasRequiredFields = false
+  ;
+
+  VendorListResponse._() : super();
+  factory VendorListResponse({
+    $core.String? kind,
+    $core.String? etag,
+    $core.String? nextPageToken,
+    $core.String? prevPageToken,
+    PageInfo? pageInfo,
+    $core.Iterable<Vendor>? items,
+  }) {
+    final _result = create();
+    if (kind != null) {
+      _result.kind = kind;
+    }
+    if (etag != null) {
+      _result.etag = etag;
+    }
+    if (nextPageToken != null) {
+      _result.nextPageToken = nextPageToken;
+    }
+    if (prevPageToken != null) {
+      _result.prevPageToken = prevPageToken;
+    }
+    if (pageInfo != null) {
+      _result.pageInfo = pageInfo;
+    }
+    if (items != null) {
+      _result.items.addAll(items);
+    }
+    return _result;
+  }
+  factory VendorListResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory VendorListResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  VendorListResponse clone() => VendorListResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  VendorListResponse copyWith(void Function(VendorListResponse) updates) => super.copyWith((message) => updates(message as VendorListResponse)) as VendorListResponse; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static VendorListResponse create() => VendorListResponse._();
+  VendorListResponse createEmptyInstance() => create();
+  static $pb.PbList<VendorListResponse> createRepeated() => $pb.PbList<VendorListResponse>();
+  @$core.pragma('dart2js:noInline')
+  static VendorListResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<VendorListResponse>(create);
+  static VendorListResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get kind => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set kind($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasKind() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearKind() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get etag => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set etag($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasEtag() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearEtag() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get nextPageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set nextPageToken($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasNextPageToken() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearNextPageToken() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get prevPageToken => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set prevPageToken($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasPrevPageToken() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearPrevPageToken() => clearField(4);
+
+  @$pb.TagNumber(5)
+  PageInfo get pageInfo => $_getN(4);
+  @$pb.TagNumber(5)
+  set pageInfo(PageInfo v) { setField(5, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasPageInfo() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearPageInfo() => clearField(5);
+  @$pb.TagNumber(5)
+  PageInfo ensurePageInfo() => $_ensure(4);
+
+  @$pb.TagNumber(6)
+  $core.List<Vendor> get items => $_getList(5);
+}
+
+class ProductPrice extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ProductPrice', createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'value')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'currency')
+    ..hasRequiredFields = false
+  ;
+
+  ProductPrice._() : super();
+  factory ProductPrice({
+    $core.String? value,
+    $core.String? currency,
+  }) {
+    final _result = create();
+    if (value != null) {
+      _result.value = value;
+    }
+    if (currency != null) {
+      _result.currency = currency;
+    }
+    return _result;
+  }
+  factory ProductPrice.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ProductPrice.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ProductPrice clone() => ProductPrice()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ProductPrice copyWith(void Function(ProductPrice) updates) => super.copyWith((message) => updates(message as ProductPrice)) as ProductPrice; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ProductPrice create() => ProductPrice._();
+  ProductPrice createEmptyInstance() => create();
+  static $pb.PbList<ProductPrice> createRepeated() => $pb.PbList<ProductPrice>();
+  @$core.pragma('dart2js:noInline')
+  static ProductPrice getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ProductPrice>(create);
+  static ProductPrice? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get value => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set value($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasValue() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearValue() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get currency => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set currency($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasCurrency() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearCurrency() => clearField(2);
+}
+
+class ProductTax extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ProductTax', createEmptyInstance: create)
     ..a<$core.double>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'rate', $pb.PbFieldType.OD)
     ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'country')
     ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'region')
@@ -142,8 +1242,8 @@ class Product_Tax extends $pb.GeneratedMessage {
     ..hasRequiredFields = false
   ;
 
-  Product_Tax._() : super();
-  factory Product_Tax({
+  ProductTax._() : super();
+  factory ProductTax({
     $core.double? rate,
     $core.String? country,
     $core.String? region,
@@ -172,26 +1272,26 @@ class Product_Tax extends $pb.GeneratedMessage {
     }
     return _result;
   }
-  factory Product_Tax.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Product_Tax.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory ProductTax.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ProductTax.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  Product_Tax clone() => Product_Tax()..mergeFromMessage(this);
+  ProductTax clone() => ProductTax()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Product_Tax copyWith(void Function(Product_Tax) updates) => super.copyWith((message) => updates(message as Product_Tax)) as Product_Tax; // ignore: deprecated_member_use
+  ProductTax copyWith(void Function(ProductTax) updates) => super.copyWith((message) => updates(message as ProductTax)) as ProductTax; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static Product_Tax create() => Product_Tax._();
-  Product_Tax createEmptyInstance() => create();
-  static $pb.PbList<Product_Tax> createRepeated() => $pb.PbList<Product_Tax>();
+  static ProductTax create() => ProductTax._();
+  ProductTax createEmptyInstance() => create();
+  static $pb.PbList<ProductTax> createRepeated() => $pb.PbList<ProductTax>();
   @$core.pragma('dart2js:noInline')
-  static Product_Tax getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Product_Tax>(create);
-  static Product_Tax? _defaultInstance;
+  static ProductTax getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ProductTax>(create);
+  static ProductTax? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.double get rate => $_getN(0);
@@ -248,27 +1348,27 @@ class Product_Tax extends $pb.GeneratedMessage {
   void clearPostalCode() => clearField(6);
 }
 
-class Product_Snippet extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Product.Snippet', createEmptyInstance: create)
+class ProductSnippet extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ProductSnippet', createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'title')
     ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'description')
     ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'link')
     ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'imageLink', protoName: 'imageLink')
     ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'itemGroupId', protoName: 'itemGroupId')
-    ..aOM<Product_Price>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'price', subBuilder: Product_Price.create)
-    ..aOM<Product_Price>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'salePrice', protoName: 'salePrice', subBuilder: Product_Price.create)
+    ..aOM<ProductPrice>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'price', subBuilder: ProductPrice.create)
+    ..aOM<ProductPrice>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'salePrice', protoName: 'salePrice', subBuilder: ProductPrice.create)
     ..hasRequiredFields = false
   ;
 
-  Product_Snippet._() : super();
-  factory Product_Snippet({
+  ProductSnippet._() : super();
+  factory ProductSnippet({
     $core.String? title,
     $core.String? description,
     $core.String? link,
     $core.String? imageLink,
     $core.String? itemGroupId,
-    Product_Price? price,
-    Product_Price? salePrice,
+    ProductPrice? price,
+    ProductPrice? salePrice,
   }) {
     final _result = create();
     if (title != null) {
@@ -294,26 +1394,26 @@ class Product_Snippet extends $pb.GeneratedMessage {
     }
     return _result;
   }
-  factory Product_Snippet.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Product_Snippet.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory ProductSnippet.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ProductSnippet.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  Product_Snippet clone() => Product_Snippet()..mergeFromMessage(this);
+  ProductSnippet clone() => ProductSnippet()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Product_Snippet copyWith(void Function(Product_Snippet) updates) => super.copyWith((message) => updates(message as Product_Snippet)) as Product_Snippet; // ignore: deprecated_member_use
+  ProductSnippet copyWith(void Function(ProductSnippet) updates) => super.copyWith((message) => updates(message as ProductSnippet)) as ProductSnippet; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static Product_Snippet create() => Product_Snippet._();
-  Product_Snippet createEmptyInstance() => create();
-  static $pb.PbList<Product_Snippet> createRepeated() => $pb.PbList<Product_Snippet>();
+  static ProductSnippet create() => ProductSnippet._();
+  ProductSnippet createEmptyInstance() => create();
+  static $pb.PbList<ProductSnippet> createRepeated() => $pb.PbList<ProductSnippet>();
   @$core.pragma('dart2js:noInline')
-  static Product_Snippet getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Product_Snippet>(create);
-  static Product_Snippet? _defaultInstance;
+  static ProductSnippet getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ProductSnippet>(create);
+  static ProductSnippet? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get title => $_getSZ(0);
@@ -361,41 +1461,43 @@ class Product_Snippet extends $pb.GeneratedMessage {
   void clearItemGroupId() => clearField(5);
 
   @$pb.TagNumber(6)
-  Product_Price get price => $_getN(5);
+  ProductPrice get price => $_getN(5);
   @$pb.TagNumber(6)
-  set price(Product_Price v) { setField(6, v); }
+  set price(ProductPrice v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasPrice() => $_has(5);
   @$pb.TagNumber(6)
   void clearPrice() => clearField(6);
   @$pb.TagNumber(6)
-  Product_Price ensurePrice() => $_ensure(5);
+  ProductPrice ensurePrice() => $_ensure(5);
 
   @$pb.TagNumber(7)
-  Product_Price get salePrice => $_getN(6);
+  ProductPrice get salePrice => $_getN(6);
   @$pb.TagNumber(7)
-  set salePrice(Product_Price v) { setField(7, v); }
+  set salePrice(ProductPrice v) { setField(7, v); }
   @$pb.TagNumber(7)
   $core.bool hasSalePrice() => $_has(6);
   @$pb.TagNumber(7)
   void clearSalePrice() => clearField(7);
   @$pb.TagNumber(7)
-  Product_Price ensureSalePrice() => $_ensure(6);
+  ProductPrice ensureSalePrice() => $_ensure(6);
 }
 
-class Product_ContentDetails extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Product.ContentDetails', createEmptyInstance: create)
+class ProductContentDetails extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ProductContentDetails', createEmptyInstance: create)
     ..pPS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'additionalImageLinks', protoName: 'additionalImageLinks')
-    ..pc<Product_Tax>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'taxes', $pb.PbFieldType.PM, subBuilder: Product_Tax.create)
-    ..a<$core.int>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'Quantity', $pb.PbFieldType.O3, protoName: 'Quantity')
+    ..pc<ProductTax>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'taxes', $pb.PbFieldType.PM, subBuilder: ProductTax.create)
+    ..a<$core.int>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'quantity', $pb.PbFieldType.O3)
+    ..pc<CustomAttribute>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'customAttributes', $pb.PbFieldType.PM, protoName: 'customAttributes', subBuilder: CustomAttribute.create)
     ..hasRequiredFields = false
   ;
 
-  Product_ContentDetails._() : super();
-  factory Product_ContentDetails({
+  ProductContentDetails._() : super();
+  factory ProductContentDetails({
     $core.Iterable<$core.String>? additionalImageLinks,
-    $core.Iterable<Product_Tax>? taxes,
+    $core.Iterable<ProductTax>? taxes,
     $core.int? quantity,
+    $core.Iterable<CustomAttribute>? customAttributes,
   }) {
     final _result = create();
     if (additionalImageLinks != null) {
@@ -407,34 +1509,37 @@ class Product_ContentDetails extends $pb.GeneratedMessage {
     if (quantity != null) {
       _result.quantity = quantity;
     }
+    if (customAttributes != null) {
+      _result.customAttributes.addAll(customAttributes);
+    }
     return _result;
   }
-  factory Product_ContentDetails.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Product_ContentDetails.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory ProductContentDetails.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ProductContentDetails.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  Product_ContentDetails clone() => Product_ContentDetails()..mergeFromMessage(this);
+  ProductContentDetails clone() => ProductContentDetails()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Product_ContentDetails copyWith(void Function(Product_ContentDetails) updates) => super.copyWith((message) => updates(message as Product_ContentDetails)) as Product_ContentDetails; // ignore: deprecated_member_use
+  ProductContentDetails copyWith(void Function(ProductContentDetails) updates) => super.copyWith((message) => updates(message as ProductContentDetails)) as ProductContentDetails; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static Product_ContentDetails create() => Product_ContentDetails._();
-  Product_ContentDetails createEmptyInstance() => create();
-  static $pb.PbList<Product_ContentDetails> createRepeated() => $pb.PbList<Product_ContentDetails>();
+  static ProductContentDetails create() => ProductContentDetails._();
+  ProductContentDetails createEmptyInstance() => create();
+  static $pb.PbList<ProductContentDetails> createRepeated() => $pb.PbList<ProductContentDetails>();
   @$core.pragma('dart2js:noInline')
-  static Product_ContentDetails getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Product_ContentDetails>(create);
-  static Product_ContentDetails? _defaultInstance;
+  static ProductContentDetails getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ProductContentDetails>(create);
+  static ProductContentDetails? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.String> get additionalImageLinks => $_getList(0);
 
   @$pb.TagNumber(2)
-  $core.List<Product_Tax> get taxes => $_getList(1);
+  $core.List<ProductTax> get taxes => $_getList(1);
 
   @$pb.TagNumber(3)
   $core.int get quantity => $_getIZ(2);
@@ -444,27 +1549,35 @@ class Product_ContentDetails extends $pb.GeneratedMessage {
   $core.bool hasQuantity() => $_has(2);
   @$pb.TagNumber(3)
   void clearQuantity() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.List<CustomAttribute> get customAttributes => $_getList(3);
 }
 
 class Product extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Product', createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'kind')
-    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
-    ..aOM<Product_Snippet>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'snippet', subBuilder: Product_Snippet.create)
-    ..aOM<Product_ContentDetails>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'contentDetails', protoName: 'contentDetails', subBuilder: Product_ContentDetails.create)
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'etag')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
+    ..aOM<ProductSnippet>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'snippet', subBuilder: ProductSnippet.create)
+    ..aOM<ProductContentDetails>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'contentDetails', protoName: 'contentDetails', subBuilder: ProductContentDetails.create)
     ..hasRequiredFields = false
   ;
 
   Product._() : super();
   factory Product({
     $core.String? kind,
+    $core.String? etag,
     $core.String? id,
-    Product_Snippet? snippet,
-    Product_ContentDetails? contentDetails,
+    ProductSnippet? snippet,
+    ProductContentDetails? contentDetails,
   }) {
     final _result = create();
     if (kind != null) {
       _result.kind = kind;
+    }
+    if (etag != null) {
+      _result.etag = etag;
     }
     if (id != null) {
       _result.id = id;
@@ -508,50 +1621,61 @@ class Product extends $pb.GeneratedMessage {
   void clearKind() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.String get id => $_getSZ(1);
+  $core.String get etag => $_getSZ(1);
   @$pb.TagNumber(2)
-  set id($core.String v) { $_setString(1, v); }
+  set etag($core.String v) { $_setString(1, v); }
   @$pb.TagNumber(2)
-  $core.bool hasId() => $_has(1);
+  $core.bool hasEtag() => $_has(1);
   @$pb.TagNumber(2)
-  void clearId() => clearField(2);
+  void clearEtag() => clearField(2);
 
   @$pb.TagNumber(3)
-  Product_Snippet get snippet => $_getN(2);
+  $core.String get id => $_getSZ(2);
   @$pb.TagNumber(3)
-  set snippet(Product_Snippet v) { setField(3, v); }
+  set id($core.String v) { $_setString(2, v); }
   @$pb.TagNumber(3)
-  $core.bool hasSnippet() => $_has(2);
+  $core.bool hasId() => $_has(2);
   @$pb.TagNumber(3)
-  void clearSnippet() => clearField(3);
-  @$pb.TagNumber(3)
-  Product_Snippet ensureSnippet() => $_ensure(2);
+  void clearId() => clearField(3);
 
   @$pb.TagNumber(4)
-  Product_ContentDetails get contentDetails => $_getN(3);
+  ProductSnippet get snippet => $_getN(3);
   @$pb.TagNumber(4)
-  set contentDetails(Product_ContentDetails v) { setField(4, v); }
+  set snippet(ProductSnippet v) { setField(4, v); }
   @$pb.TagNumber(4)
-  $core.bool hasContentDetails() => $_has(3);
+  $core.bool hasSnippet() => $_has(3);
   @$pb.TagNumber(4)
-  void clearContentDetails() => clearField(4);
+  void clearSnippet() => clearField(4);
   @$pb.TagNumber(4)
-  Product_ContentDetails ensureContentDetails() => $_ensure(3);
+  ProductSnippet ensureSnippet() => $_ensure(3);
+
+  @$pb.TagNumber(5)
+  ProductContentDetails get contentDetails => $_getN(4);
+  @$pb.TagNumber(5)
+  set contentDetails(ProductContentDetails v) { setField(5, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasContentDetails() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearContentDetails() => clearField(5);
+  @$pb.TagNumber(5)
+  ProductContentDetails ensureContentDetails() => $_ensure(4);
 }
 
 class ProductListResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ProductListResponse', createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'kind')
-    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'nextPageToken', protoName: 'nextPageToken')
-    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'prevPageToken', protoName: 'prevPageToken')
-    ..aOM<PageInfo>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'pageInfo', protoName: 'pageInfo', subBuilder: PageInfo.create)
-    ..pc<Product>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'items', $pb.PbFieldType.PM, subBuilder: Product.create)
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'etag')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'nextPageToken', protoName: 'nextPageToken')
+    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'prevPageToken', protoName: 'prevPageToken')
+    ..aOM<PageInfo>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'pageInfo', protoName: 'pageInfo', subBuilder: PageInfo.create)
+    ..pc<Product>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'items', $pb.PbFieldType.PM, subBuilder: Product.create)
     ..hasRequiredFields = false
   ;
 
   ProductListResponse._() : super();
   factory ProductListResponse({
     $core.String? kind,
+    $core.String? etag,
     $core.String? nextPageToken,
     $core.String? prevPageToken,
     PageInfo? pageInfo,
@@ -560,6 +1684,9 @@ class ProductListResponse extends $pb.GeneratedMessage {
     final _result = create();
     if (kind != null) {
       _result.kind = kind;
+    }
+    if (etag != null) {
+      _result.etag = etag;
     }
     if (nextPageToken != null) {
       _result.nextPageToken = nextPageToken;
@@ -606,35 +1733,880 @@ class ProductListResponse extends $pb.GeneratedMessage {
   void clearKind() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.String get nextPageToken => $_getSZ(1);
+  $core.String get etag => $_getSZ(1);
   @$pb.TagNumber(2)
-  set nextPageToken($core.String v) { $_setString(1, v); }
+  set etag($core.String v) { $_setString(1, v); }
   @$pb.TagNumber(2)
-  $core.bool hasNextPageToken() => $_has(1);
+  $core.bool hasEtag() => $_has(1);
   @$pb.TagNumber(2)
-  void clearNextPageToken() => clearField(2);
+  void clearEtag() => clearField(2);
 
   @$pb.TagNumber(3)
-  $core.String get prevPageToken => $_getSZ(2);
+  $core.String get nextPageToken => $_getSZ(2);
   @$pb.TagNumber(3)
-  set prevPageToken($core.String v) { $_setString(2, v); }
+  set nextPageToken($core.String v) { $_setString(2, v); }
   @$pb.TagNumber(3)
-  $core.bool hasPrevPageToken() => $_has(2);
+  $core.bool hasNextPageToken() => $_has(2);
   @$pb.TagNumber(3)
-  void clearPrevPageToken() => clearField(3);
+  void clearNextPageToken() => clearField(3);
 
   @$pb.TagNumber(4)
-  PageInfo get pageInfo => $_getN(3);
+  $core.String get prevPageToken => $_getSZ(3);
   @$pb.TagNumber(4)
-  set pageInfo(PageInfo v) { setField(4, v); }
+  set prevPageToken($core.String v) { $_setString(3, v); }
   @$pb.TagNumber(4)
-  $core.bool hasPageInfo() => $_has(3);
+  $core.bool hasPrevPageToken() => $_has(3);
   @$pb.TagNumber(4)
-  void clearPageInfo() => clearField(4);
-  @$pb.TagNumber(4)
-  PageInfo ensurePageInfo() => $_ensure(3);
+  void clearPrevPageToken() => clearField(4);
 
   @$pb.TagNumber(5)
-  $core.List<Product> get items => $_getList(4);
+  PageInfo get pageInfo => $_getN(4);
+  @$pb.TagNumber(5)
+  set pageInfo(PageInfo v) { setField(5, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasPageInfo() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearPageInfo() => clearField(5);
+  @$pb.TagNumber(5)
+  PageInfo ensurePageInfo() => $_ensure(4);
+
+  @$pb.TagNumber(6)
+  $core.List<Product> get items => $_getList(5);
+}
+
+class OrderLineItemProduct extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'OrderLineItemProduct', createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
+    ..aOM<Price>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'price', subBuilder: Price.create)
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'title')
+    ..a<$core.double>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'taxRate', $pb.PbFieldType.OD, protoName: 'taxRate')
+    ..hasRequiredFields = false
+  ;
+
+  OrderLineItemProduct._() : super();
+  factory OrderLineItemProduct({
+    $core.String? id,
+    Price? price,
+    $core.String? title,
+    $core.double? taxRate,
+  }) {
+    final _result = create();
+    if (id != null) {
+      _result.id = id;
+    }
+    if (price != null) {
+      _result.price = price;
+    }
+    if (title != null) {
+      _result.title = title;
+    }
+    if (taxRate != null) {
+      _result.taxRate = taxRate;
+    }
+    return _result;
+  }
+  factory OrderLineItemProduct.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory OrderLineItemProduct.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  OrderLineItemProduct clone() => OrderLineItemProduct()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  OrderLineItemProduct copyWith(void Function(OrderLineItemProduct) updates) => super.copyWith((message) => updates(message as OrderLineItemProduct)) as OrderLineItemProduct; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static OrderLineItemProduct create() => OrderLineItemProduct._();
+  OrderLineItemProduct createEmptyInstance() => create();
+  static $pb.PbList<OrderLineItemProduct> createRepeated() => $pb.PbList<OrderLineItemProduct>();
+  @$core.pragma('dart2js:noInline')
+  static OrderLineItemProduct getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<OrderLineItemProduct>(create);
+  static OrderLineItemProduct? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get id => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set id($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  Price get price => $_getN(1);
+  @$pb.TagNumber(2)
+  set price(Price v) { setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasPrice() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearPrice() => clearField(2);
+  @$pb.TagNumber(2)
+  Price ensurePrice() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  $core.String get title => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set title($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasTitle() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearTitle() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.double get taxRate => $_getN(3);
+  @$pb.TagNumber(4)
+  set taxRate($core.double v) { $_setDouble(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasTaxRate() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearTaxRate() => clearField(4);
+}
+
+class OrderLineItemShippingDetails extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'OrderLineItemShippingDetails', createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'type')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'shipByDate', protoName: 'shipByDate')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'deliverByDate', protoName: 'deliverByDate')
+    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'warehouseId', protoName: 'warehouseId')
+    ..hasRequiredFields = false
+  ;
+
+  OrderLineItemShippingDetails._() : super();
+  factory OrderLineItemShippingDetails({
+    $core.String? type,
+    $core.String? shipByDate,
+    $core.String? deliverByDate,
+    $core.String? warehouseId,
+  }) {
+    final _result = create();
+    if (type != null) {
+      _result.type = type;
+    }
+    if (shipByDate != null) {
+      _result.shipByDate = shipByDate;
+    }
+    if (deliverByDate != null) {
+      _result.deliverByDate = deliverByDate;
+    }
+    if (warehouseId != null) {
+      _result.warehouseId = warehouseId;
+    }
+    return _result;
+  }
+  factory OrderLineItemShippingDetails.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory OrderLineItemShippingDetails.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  OrderLineItemShippingDetails clone() => OrderLineItemShippingDetails()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  OrderLineItemShippingDetails copyWith(void Function(OrderLineItemShippingDetails) updates) => super.copyWith((message) => updates(message as OrderLineItemShippingDetails)) as OrderLineItemShippingDetails; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static OrderLineItemShippingDetails create() => OrderLineItemShippingDetails._();
+  OrderLineItemShippingDetails createEmptyInstance() => create();
+  static $pb.PbList<OrderLineItemShippingDetails> createRepeated() => $pb.PbList<OrderLineItemShippingDetails>();
+  @$core.pragma('dart2js:noInline')
+  static OrderLineItemShippingDetails getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<OrderLineItemShippingDetails>(create);
+  static OrderLineItemShippingDetails? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get type => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set type($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasType() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearType() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get shipByDate => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set shipByDate($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasShipByDate() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearShipByDate() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get deliverByDate => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set deliverByDate($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasDeliverByDate() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearDeliverByDate() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get warehouseId => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set warehouseId($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasWarehouseId() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearWarehouseId() => clearField(4);
+}
+
+class OrderLineItem extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'OrderLineItem', createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
+    ..a<$core.int>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'quantityOrdered', $pb.PbFieldType.O3, protoName: 'quantityOrdered')
+    ..a<$core.int>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'quantityPending', $pb.PbFieldType.O3, protoName: 'quantityPending')
+    ..a<$core.int>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'quantityShipped', $pb.PbFieldType.O3, protoName: 'quantityShipped')
+    ..a<$core.int>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'quantityDelivered', $pb.PbFieldType.O3, protoName: 'quantityDelivered')
+    ..a<$core.int>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'quantityReturned', $pb.PbFieldType.O3, protoName: 'quantityReturned')
+    ..a<$core.int>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'quantityCanceled', $pb.PbFieldType.O3, protoName: 'quantityCanceled')
+    ..a<$core.int>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'quantityUndeliverable', $pb.PbFieldType.O3, protoName: 'quantityUndeliverable')
+    ..a<$core.int>(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'quantityReadyForPickup', $pb.PbFieldType.O3, protoName: 'quantityReadyForPickup')
+    ..aOM<Price>(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'price', subBuilder: Price.create)
+    ..aOM<OrderLineItemProduct>(11, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'product', subBuilder: OrderLineItemProduct.create)
+    ..aOM<OrderLineItemShippingDetails>(12, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'shippingDetails', protoName: 'shippingDetails', subBuilder: OrderLineItemShippingDetails.create)
+    ..hasRequiredFields = false
+  ;
+
+  OrderLineItem._() : super();
+  factory OrderLineItem({
+    $core.String? id,
+    $core.int? quantityOrdered,
+    $core.int? quantityPending,
+    $core.int? quantityShipped,
+    $core.int? quantityDelivered,
+    $core.int? quantityReturned,
+    $core.int? quantityCanceled,
+    $core.int? quantityUndeliverable,
+    $core.int? quantityReadyForPickup,
+    Price? price,
+    OrderLineItemProduct? product,
+    OrderLineItemShippingDetails? shippingDetails,
+  }) {
+    final _result = create();
+    if (id != null) {
+      _result.id = id;
+    }
+    if (quantityOrdered != null) {
+      _result.quantityOrdered = quantityOrdered;
+    }
+    if (quantityPending != null) {
+      _result.quantityPending = quantityPending;
+    }
+    if (quantityShipped != null) {
+      _result.quantityShipped = quantityShipped;
+    }
+    if (quantityDelivered != null) {
+      _result.quantityDelivered = quantityDelivered;
+    }
+    if (quantityReturned != null) {
+      _result.quantityReturned = quantityReturned;
+    }
+    if (quantityCanceled != null) {
+      _result.quantityCanceled = quantityCanceled;
+    }
+    if (quantityUndeliverable != null) {
+      _result.quantityUndeliverable = quantityUndeliverable;
+    }
+    if (quantityReadyForPickup != null) {
+      _result.quantityReadyForPickup = quantityReadyForPickup;
+    }
+    if (price != null) {
+      _result.price = price;
+    }
+    if (product != null) {
+      _result.product = product;
+    }
+    if (shippingDetails != null) {
+      _result.shippingDetails = shippingDetails;
+    }
+    return _result;
+  }
+  factory OrderLineItem.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory OrderLineItem.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  OrderLineItem clone() => OrderLineItem()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  OrderLineItem copyWith(void Function(OrderLineItem) updates) => super.copyWith((message) => updates(message as OrderLineItem)) as OrderLineItem; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static OrderLineItem create() => OrderLineItem._();
+  OrderLineItem createEmptyInstance() => create();
+  static $pb.PbList<OrderLineItem> createRepeated() => $pb.PbList<OrderLineItem>();
+  @$core.pragma('dart2js:noInline')
+  static OrderLineItem getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<OrderLineItem>(create);
+  static OrderLineItem? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get id => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set id($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.int get quantityOrdered => $_getIZ(1);
+  @$pb.TagNumber(2)
+  set quantityOrdered($core.int v) { $_setSignedInt32(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasQuantityOrdered() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearQuantityOrdered() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.int get quantityPending => $_getIZ(2);
+  @$pb.TagNumber(3)
+  set quantityPending($core.int v) { $_setSignedInt32(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasQuantityPending() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearQuantityPending() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.int get quantityShipped => $_getIZ(3);
+  @$pb.TagNumber(4)
+  set quantityShipped($core.int v) { $_setSignedInt32(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasQuantityShipped() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearQuantityShipped() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.int get quantityDelivered => $_getIZ(4);
+  @$pb.TagNumber(5)
+  set quantityDelivered($core.int v) { $_setSignedInt32(4, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasQuantityDelivered() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearQuantityDelivered() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.int get quantityReturned => $_getIZ(5);
+  @$pb.TagNumber(6)
+  set quantityReturned($core.int v) { $_setSignedInt32(5, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasQuantityReturned() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearQuantityReturned() => clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.int get quantityCanceled => $_getIZ(6);
+  @$pb.TagNumber(7)
+  set quantityCanceled($core.int v) { $_setSignedInt32(6, v); }
+  @$pb.TagNumber(7)
+  $core.bool hasQuantityCanceled() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearQuantityCanceled() => clearField(7);
+
+  @$pb.TagNumber(8)
+  $core.int get quantityUndeliverable => $_getIZ(7);
+  @$pb.TagNumber(8)
+  set quantityUndeliverable($core.int v) { $_setSignedInt32(7, v); }
+  @$pb.TagNumber(8)
+  $core.bool hasQuantityUndeliverable() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearQuantityUndeliverable() => clearField(8);
+
+  @$pb.TagNumber(9)
+  $core.int get quantityReadyForPickup => $_getIZ(8);
+  @$pb.TagNumber(9)
+  set quantityReadyForPickup($core.int v) { $_setSignedInt32(8, v); }
+  @$pb.TagNumber(9)
+  $core.bool hasQuantityReadyForPickup() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearQuantityReadyForPickup() => clearField(9);
+
+  @$pb.TagNumber(10)
+  Price get price => $_getN(9);
+  @$pb.TagNumber(10)
+  set price(Price v) { setField(10, v); }
+  @$pb.TagNumber(10)
+  $core.bool hasPrice() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearPrice() => clearField(10);
+  @$pb.TagNumber(10)
+  Price ensurePrice() => $_ensure(9);
+
+  @$pb.TagNumber(11)
+  OrderLineItemProduct get product => $_getN(10);
+  @$pb.TagNumber(11)
+  set product(OrderLineItemProduct v) { setField(11, v); }
+  @$pb.TagNumber(11)
+  $core.bool hasProduct() => $_has(10);
+  @$pb.TagNumber(11)
+  void clearProduct() => clearField(11);
+  @$pb.TagNumber(11)
+  OrderLineItemProduct ensureProduct() => $_ensure(10);
+
+  @$pb.TagNumber(12)
+  OrderLineItemShippingDetails get shippingDetails => $_getN(11);
+  @$pb.TagNumber(12)
+  set shippingDetails(OrderLineItemShippingDetails v) { setField(12, v); }
+  @$pb.TagNumber(12)
+  $core.bool hasShippingDetails() => $_has(11);
+  @$pb.TagNumber(12)
+  void clearShippingDetails() => clearField(12);
+  @$pb.TagNumber(12)
+  OrderLineItemShippingDetails ensureShippingDetails() => $_ensure(11);
+}
+
+class OrderSnippet extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'OrderSnippet', createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'merchantId', protoName: 'merchantId')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'merchantOrderId', protoName: 'merchantOrderId')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'customerId', protoName: 'customerId')
+    ..pc<OrderLineItem>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'lineItems', $pb.PbFieldType.PM, protoName: 'lineItems', subBuilder: OrderLineItem.create)
+    ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'placedDate', protoName: 'placedDate')
+    ..hasRequiredFields = false
+  ;
+
+  OrderSnippet._() : super();
+  factory OrderSnippet({
+    $core.String? merchantId,
+    $core.String? merchantOrderId,
+    $core.String? customerId,
+    $core.Iterable<OrderLineItem>? lineItems,
+    $core.String? placedDate,
+  }) {
+    final _result = create();
+    if (merchantId != null) {
+      _result.merchantId = merchantId;
+    }
+    if (merchantOrderId != null) {
+      _result.merchantOrderId = merchantOrderId;
+    }
+    if (customerId != null) {
+      _result.customerId = customerId;
+    }
+    if (lineItems != null) {
+      _result.lineItems.addAll(lineItems);
+    }
+    if (placedDate != null) {
+      _result.placedDate = placedDate;
+    }
+    return _result;
+  }
+  factory OrderSnippet.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory OrderSnippet.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  OrderSnippet clone() => OrderSnippet()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  OrderSnippet copyWith(void Function(OrderSnippet) updates) => super.copyWith((message) => updates(message as OrderSnippet)) as OrderSnippet; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static OrderSnippet create() => OrderSnippet._();
+  OrderSnippet createEmptyInstance() => create();
+  static $pb.PbList<OrderSnippet> createRepeated() => $pb.PbList<OrderSnippet>();
+  @$core.pragma('dart2js:noInline')
+  static OrderSnippet getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<OrderSnippet>(create);
+  static OrderSnippet? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get merchantId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set merchantId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasMerchantId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearMerchantId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get merchantOrderId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set merchantOrderId($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasMerchantOrderId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearMerchantOrderId() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get customerId => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set customerId($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasCustomerId() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearCustomerId() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.List<OrderLineItem> get lineItems => $_getList(3);
+
+  @$pb.TagNumber(5)
+  $core.String get placedDate => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set placedDate($core.String v) { $_setString(4, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasPlacedDate() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearPlacedDate() => clearField(5);
+}
+
+class OrderStatus extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'OrderStatus', createEmptyInstance: create)
+    ..e<OrderOrderStatus>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'orderStatus', $pb.PbFieldType.OE, protoName: 'orderStatus', defaultOrMaker: OrderOrderStatus.canceled, valueOf: OrderOrderStatus.valueOf, enumValues: OrderOrderStatus.values)
+    ..e<OrderPaymentStatus>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'paymentStatus', $pb.PbFieldType.OE, protoName: 'paymentStatus', defaultOrMaker: OrderPaymentStatus.paymentCaptured, valueOf: OrderPaymentStatus.valueOf, enumValues: OrderPaymentStatus.values)
+    ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'placedDate', protoName: 'placedDate')
+    ..hasRequiredFields = false
+  ;
+
+  OrderStatus._() : super();
+  factory OrderStatus({
+    OrderOrderStatus? orderStatus,
+    OrderPaymentStatus? paymentStatus,
+    $core.String? placedDate,
+  }) {
+    final _result = create();
+    if (orderStatus != null) {
+      _result.orderStatus = orderStatus;
+    }
+    if (paymentStatus != null) {
+      _result.paymentStatus = paymentStatus;
+    }
+    if (placedDate != null) {
+      _result.placedDate = placedDate;
+    }
+    return _result;
+  }
+  factory OrderStatus.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory OrderStatus.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  OrderStatus clone() => OrderStatus()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  OrderStatus copyWith(void Function(OrderStatus) updates) => super.copyWith((message) => updates(message as OrderStatus)) as OrderStatus; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static OrderStatus create() => OrderStatus._();
+  OrderStatus createEmptyInstance() => create();
+  static $pb.PbList<OrderStatus> createRepeated() => $pb.PbList<OrderStatus>();
+  @$core.pragma('dart2js:noInline')
+  static OrderStatus getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<OrderStatus>(create);
+  static OrderStatus? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  OrderOrderStatus get orderStatus => $_getN(0);
+  @$pb.TagNumber(1)
+  set orderStatus(OrderOrderStatus v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasOrderStatus() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearOrderStatus() => clearField(1);
+
+  @$pb.TagNumber(2)
+  OrderPaymentStatus get paymentStatus => $_getN(1);
+  @$pb.TagNumber(2)
+  set paymentStatus(OrderPaymentStatus v) { setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasPaymentStatus() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearPaymentStatus() => clearField(2);
+
+  @$pb.TagNumber(5)
+  $core.String get placedDate => $_getSZ(2);
+  @$pb.TagNumber(5)
+  set placedDate($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasPlacedDate() => $_has(2);
+  @$pb.TagNumber(5)
+  void clearPlacedDate() => clearField(5);
+}
+
+class OrderContentDetails extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'OrderContentDetails', createEmptyInstance: create)
+    ..pc<CustomAttribute>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'customAttributes', $pb.PbFieldType.PM, protoName: 'customAttributes', subBuilder: CustomAttribute.create)
+    ..hasRequiredFields = false
+  ;
+
+  OrderContentDetails._() : super();
+  factory OrderContentDetails({
+    $core.Iterable<CustomAttribute>? customAttributes,
+  }) {
+    final _result = create();
+    if (customAttributes != null) {
+      _result.customAttributes.addAll(customAttributes);
+    }
+    return _result;
+  }
+  factory OrderContentDetails.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory OrderContentDetails.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  OrderContentDetails clone() => OrderContentDetails()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  OrderContentDetails copyWith(void Function(OrderContentDetails) updates) => super.copyWith((message) => updates(message as OrderContentDetails)) as OrderContentDetails; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static OrderContentDetails create() => OrderContentDetails._();
+  OrderContentDetails createEmptyInstance() => create();
+  static $pb.PbList<OrderContentDetails> createRepeated() => $pb.PbList<OrderContentDetails>();
+  @$core.pragma('dart2js:noInline')
+  static OrderContentDetails getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<OrderContentDetails>(create);
+  static OrderContentDetails? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<CustomAttribute> get customAttributes => $_getList(0);
+}
+
+class Order extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Order', createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'kind')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'etag')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
+    ..aOM<OrderSnippet>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'snippet', subBuilder: OrderSnippet.create)
+    ..aOM<OrderStatus>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'status', subBuilder: OrderStatus.create)
+    ..aOM<OrderContentDetails>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'contentDetails', protoName: 'contentDetails', subBuilder: OrderContentDetails.create)
+    ..hasRequiredFields = false
+  ;
+
+  Order._() : super();
+  factory Order({
+    $core.String? kind,
+    $core.String? etag,
+    $core.String? id,
+    OrderSnippet? snippet,
+    OrderStatus? status,
+    OrderContentDetails? contentDetails,
+  }) {
+    final _result = create();
+    if (kind != null) {
+      _result.kind = kind;
+    }
+    if (etag != null) {
+      _result.etag = etag;
+    }
+    if (id != null) {
+      _result.id = id;
+    }
+    if (snippet != null) {
+      _result.snippet = snippet;
+    }
+    if (status != null) {
+      _result.status = status;
+    }
+    if (contentDetails != null) {
+      _result.contentDetails = contentDetails;
+    }
+    return _result;
+  }
+  factory Order.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Order.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  Order clone() => Order()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Order copyWith(void Function(Order) updates) => super.copyWith((message) => updates(message as Order)) as Order; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static Order create() => Order._();
+  Order createEmptyInstance() => create();
+  static $pb.PbList<Order> createRepeated() => $pb.PbList<Order>();
+  @$core.pragma('dart2js:noInline')
+  static Order getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Order>(create);
+  static Order? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get kind => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set kind($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasKind() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearKind() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get etag => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set etag($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasEtag() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearEtag() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get id => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set id($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasId() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearId() => clearField(3);
+
+  @$pb.TagNumber(4)
+  OrderSnippet get snippet => $_getN(3);
+  @$pb.TagNumber(4)
+  set snippet(OrderSnippet v) { setField(4, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasSnippet() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearSnippet() => clearField(4);
+  @$pb.TagNumber(4)
+  OrderSnippet ensureSnippet() => $_ensure(3);
+
+  @$pb.TagNumber(5)
+  OrderStatus get status => $_getN(4);
+  @$pb.TagNumber(5)
+  set status(OrderStatus v) { setField(5, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasStatus() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearStatus() => clearField(5);
+  @$pb.TagNumber(5)
+  OrderStatus ensureStatus() => $_ensure(4);
+
+  @$pb.TagNumber(6)
+  OrderContentDetails get contentDetails => $_getN(5);
+  @$pb.TagNumber(6)
+  set contentDetails(OrderContentDetails v) { setField(6, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasContentDetails() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearContentDetails() => clearField(6);
+  @$pb.TagNumber(6)
+  OrderContentDetails ensureContentDetails() => $_ensure(5);
+}
+
+class OrderListResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'OrderListResponse', createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'kind')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'etag')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'nextPageToken', protoName: 'nextPageToken')
+    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'prevPageToken', protoName: 'prevPageToken')
+    ..aOM<PageInfo>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'pageInfo', protoName: 'pageInfo', subBuilder: PageInfo.create)
+    ..pc<Order>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'items', $pb.PbFieldType.PM, subBuilder: Order.create)
+    ..hasRequiredFields = false
+  ;
+
+  OrderListResponse._() : super();
+  factory OrderListResponse({
+    $core.String? kind,
+    $core.String? etag,
+    $core.String? nextPageToken,
+    $core.String? prevPageToken,
+    PageInfo? pageInfo,
+    $core.Iterable<Order>? items,
+  }) {
+    final _result = create();
+    if (kind != null) {
+      _result.kind = kind;
+    }
+    if (etag != null) {
+      _result.etag = etag;
+    }
+    if (nextPageToken != null) {
+      _result.nextPageToken = nextPageToken;
+    }
+    if (prevPageToken != null) {
+      _result.prevPageToken = prevPageToken;
+    }
+    if (pageInfo != null) {
+      _result.pageInfo = pageInfo;
+    }
+    if (items != null) {
+      _result.items.addAll(items);
+    }
+    return _result;
+  }
+  factory OrderListResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory OrderListResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  OrderListResponse clone() => OrderListResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  OrderListResponse copyWith(void Function(OrderListResponse) updates) => super.copyWith((message) => updates(message as OrderListResponse)) as OrderListResponse; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static OrderListResponse create() => OrderListResponse._();
+  OrderListResponse createEmptyInstance() => create();
+  static $pb.PbList<OrderListResponse> createRepeated() => $pb.PbList<OrderListResponse>();
+  @$core.pragma('dart2js:noInline')
+  static OrderListResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<OrderListResponse>(create);
+  static OrderListResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get kind => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set kind($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasKind() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearKind() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get etag => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set etag($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasEtag() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearEtag() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get nextPageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set nextPageToken($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasNextPageToken() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearNextPageToken() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get prevPageToken => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set prevPageToken($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasPrevPageToken() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearPrevPageToken() => clearField(4);
+
+  @$pb.TagNumber(5)
+  PageInfo get pageInfo => $_getN(4);
+  @$pb.TagNumber(5)
+  set pageInfo(PageInfo v) { setField(5, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasPageInfo() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearPageInfo() => clearField(5);
+  @$pb.TagNumber(5)
+  PageInfo ensurePageInfo() => $_ensure(4);
+
+  @$pb.TagNumber(6)
+  $core.List<Order> get items => $_getList(5);
 }
 

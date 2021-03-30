@@ -1,60 +1,243 @@
 syntax = 'proto3';
 
+/// Common
 message PageInfo {
   int32 totalResults = 1;
   int32 resultsPerPage = 2;
 }
 
+message CustomAttribute {
+  string name = 1;
+  string value = 2;
+  repeated CustomAttribute groupValues = 3;
+}
+
+message Price {
+  string value = 1;
+  string currency = 2;
+}
+
+/// Warehouses
+message WarehouseSnippet {
+  string title = 1;
+  string description = 2;
+}
+
+message WarehouseContentDetails {
+  repeated CustomAttribute customAttributes = 1;
+}
+
+message Warehouse {
+  string kind = 1;
+  string etag = 2;
+  string id = 3;
+  WarehouseSnippet snippet = 4;
+  WarehouseContentDetails contentDetails = 5;
+}
+
+message WarehouseListResponse {
+  string kind = 1;
+  string etag = 2;
+  string nextPageToken = 3;
+  string prevPageToken = 4;
+  PageInfo pageInfo = 5;  
+  repeated Warehouse items = 6;
+}
+
+/// Customers
+message CustomerSnippet {
+  string title = 1;
+  string description = 2;
+}
+
+message CustomerContentDetails {
+  repeated CustomAttribute customAttributes = 1;
+}
+
+message Customer {
+  string kind = 1;
+  string etag = 2;
+  string id = 3;
+  CustomerSnippet snippet = 4;
+  CustomerContentDetails contentDetails = 5;
+}
+
+message CustomerListResponse {
+  string kind = 1;
+  string etag = 2;
+  string nextPageToken = 3;
+  string prevPageToken = 4;
+  PageInfo pageInfo = 5;  
+  repeated Customer items = 6;
+}
+
+/// Vendors
+message VendorSnippet {
+  string title = 1;
+  string description = 2;
+}
+
+message VendorContentDetails {
+  repeated CustomAttribute customAttributes = 1;
+}
+
+message Vendor {
+  string kind = 1;
+  string etag = 2;
+  string id = 3;
+  VendorSnippet snippet = 4;
+  VendorContentDetails contentDetails = 5;
+}
+
+message VendorListResponse {
+  string kind = 1;
+  string etag = 2;
+  string nextPageToken = 3;
+  string prevPageToken = 4;
+  PageInfo pageInfo = 5;  
+  repeated Vendor items = 6;
+}
+
+/// Products
+message ProductPrice {
+  string value = 1;
+  string currency = 2;
+}
+
+message ProductTax {
+  double rate = 1;
+  string country = 2;
+  string region = 3;
+  bool taxShip = 4;
+  string locationId = 5;
+  string postalCode = 6;
+}
+
+message ProductSnippet {
+  string title = 1;
+  string description = 2;
+  string link = 3;
+  string imageLink = 4;
+  string itemGroupId = 5;
+  ProductPrice price = 6;
+  ProductPrice salePrice = 7;
+}
+
+message ProductContentDetails {
+  repeated string additionalImageLinks = 1;
+  repeated ProductTax taxes = 2;
+  int32 quantity = 3;
+  repeated CustomAttribute customAttributes = 4;
+}
+
 message Product {
-  message Price {
-    string value = 1;
-    string currency = 2;
-  }
-
-  message Tax {
-    double rate = 1;
-    string country = 2;
-    string region = 3;
-    bool taxShip = 4;
-    string locationId = 5;
-    string postalCode = 6;
-  }
-
-  message Snippet {
-    string title = 1;
-    string description = 2;
-    string link = 3;
-    string imageLink = 4;
-    string itemGroupId = 5;
-    Price price = 6;
-    Price salePrice = 7;
-  }
-
-  message ContentDetails {
-    repeated string additionalImageLinks = 1;
-    repeated Tax taxes = 2;
-    int32 Quantity = 3;
-  }
-
   /// product kind domain#product,
   /// like hestia#product.
   string kind = 1;
 
+  string etag = 2;
+
   /// A unique identifier for the product, 
   /// use the product's SKU where possible.
-  string id = 2;
+  string id = 3;
 
   /// The snippet object contains basic details about product.
-  Snippet snippet = 3;
+  ProductSnippet snippet = 4;
 
   /// The content details contains information about the product content. 
-  ContentDetails contentDetails = 4;
+  ProductContentDetails contentDetails = 5;
 }
 
 message ProductListResponse {
   string kind = 1;
-  string nextPageToken = 2;
-  string prevPageToken = 3;
-  PageInfo pageInfo = 4;  
-  repeated Product items = 5;
+  string etag = 2;
+  string nextPageToken = 3;
+  string prevPageToken = 4;
+  PageInfo pageInfo = 5;  
+  repeated Product items = 6;
+}
+
+/// Orders
+message OrderLineItemProduct {
+  string id = 1;
+  Price price = 2;
+  string title = 3;
+  double taxRate = 4;
+}
+
+message OrderLineItemShippingDetails {
+  string type = 1;
+  string shipByDate = 2;
+  string deliverByDate = 3;
+  string warehouseId = 4;
+}
+
+message OrderLineItem {
+  string id = 1;
+  int32 quantityOrdered = 2;
+  int32 quantityPending = 3;
+  int32 quantityShipped = 4;
+  int32 quantityDelivered = 5;
+  int32 quantityReturned = 6;
+  int32 quantityCanceled = 7;
+  int32 quantityUndeliverable = 8;
+  int32 quantityReadyForPickup = 9;
+  Price price = 10;
+  OrderLineItemProduct product = 11;
+  OrderLineItemShippingDetails shippingDetails = 12;
+}
+
+message OrderSnippet {
+  string merchantId = 1;
+  string merchantOrderId = 2;
+  string customerId = 3;
+  repeated OrderLineItem lineItems = 4;
+  string placedDate = 5;
+}
+
+enum OrderPaymentStatus {
+  paymentCaptured = 0;
+  paymentRejected = 1;
+  paymentSecured = 2;
+  pendingAuthorization = 3;
+}
+
+enum OrderOrderStatus {
+  canceled = 0;
+  delivered = 1;
+  inProgress = 2;
+  partiallyDelivered = 3;
+  partiallyReturned = 4;
+  partiallyShipped = 5;
+  pendingShipment = 6;
+  returned = 7;
+  shipped = 8;
+}
+
+message OrderStatus {
+  OrderOrderStatus orderStatus = 1;
+  OrderPaymentStatus paymentStatus = 2;
+  string placedDate = 5;
+}
+
+message OrderContentDetails {
+  repeated CustomAttribute customAttributes = 1;
+}
+
+message Order {
+  string kind = 1;
+  string etag = 2;
+  string id = 3;
+  OrderSnippet snippet = 4;
+  OrderStatus status = 5;
+  OrderContentDetails contentDetails = 6;
+}
+
+message OrderListResponse {
+  string kind = 1;
+  string etag = 2;
+  string nextPageToken = 3;
+  string prevPageToken = 4;
+  PageInfo pageInfo = 5;  
+  repeated Order items = 6;
 }
