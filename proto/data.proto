@@ -159,6 +159,7 @@ message OrderLineItemProduct {
   Price price = 2;
   string title = 3;
   double taxRate = 4;
+  Price costOfGoodsSold = 5;
 }
 
 message OrderLineItemShippingDetails {

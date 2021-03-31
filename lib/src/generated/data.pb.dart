@@ -1735,6 +1735,7 @@ class OrderLineItemProduct extends $pb.GeneratedMessage {
     ..aOM<Price>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'price', subBuilder: Price.create)
     ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'title')
     ..a<$core.double>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'taxRate', $pb.PbFieldType.OD, protoName: 'taxRate')
+    ..aOM<Price>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'costOfGoodsSold', protoName: 'costOfGoodsSold', subBuilder: Price.create)
     ..hasRequiredFields = false
   ;
 
@@ -1744,6 +1745,7 @@ class OrderLineItemProduct extends $pb.GeneratedMessage {
     Price? price,
     $core.String? title,
     $core.double? taxRate,
+    Price? costOfGoodsSold,
   }) {
     final _result = create();
     if (id != null) {
@@ -1757,6 +1759,9 @@ class OrderLineItemProduct extends $pb.GeneratedMessage {
     }
     if (taxRate != null) {
       _result.taxRate = taxRate;
+    }
+    if (costOfGoodsSold != null) {
+      _result.costOfGoodsSold = costOfGoodsSold;
     }
     return _result;
   }
@@ -1818,6 +1823,17 @@ class OrderLineItemProduct extends $pb.GeneratedMessage {
   $core.bool hasTaxRate() => $_has(3);
   @$pb.TagNumber(4)
   void clearTaxRate() => clearField(4);
+
+  @$pb.TagNumber(5)
+  Price get costOfGoodsSold => $_getN(4);
+  @$pb.TagNumber(5)
+  set costOfGoodsSold(Price v) { setField(5, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasCostOfGoodsSold() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearCostOfGoodsSold() => clearField(5);
+  @$pb.TagNumber(5)
+  Price ensureCostOfGoodsSold() => $_ensure(4);
 }
 
 class OrderLineItemShippingDetails extends $pb.GeneratedMessage {

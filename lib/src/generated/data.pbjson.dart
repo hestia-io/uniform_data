@@ -305,11 +305,12 @@ const OrderLineItemProduct$json = const {
     const {'1': 'price', '3': 2, '4': 1, '5': 11, '6': '.Price', '10': 'price'},
     const {'1': 'title', '3': 3, '4': 1, '5': 9, '10': 'title'},
     const {'1': 'taxRate', '3': 4, '4': 1, '5': 1, '10': 'taxRate'},
+    const {'1': 'costOfGoodsSold', '3': 5, '4': 1, '5': 11, '6': '.Price', '10': 'costOfGoodsSold'},
   ],
 };
 
 /// Descriptor for `OrderLineItemProduct`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List orderLineItemProductDescriptor = $convert.base64Decode('ChRPcmRlckxpbmVJdGVtUHJvZHVjdBIOCgJpZBgBIAEoCVICaWQSHAoFcHJpY2UYAiABKAsyBi5QcmljZVIFcHJpY2USFAoFdGl0bGUYAyABKAlSBXRpdGxlEhgKB3RheFJhdGUYBCABKAFSB3RheFJhdGU=');
+final $typed_data.Uint8List orderLineItemProductDescriptor = $convert.base64Decode('ChRPcmRlckxpbmVJdGVtUHJvZHVjdBIOCgJpZBgBIAEoCVICaWQSHAoFcHJpY2UYAiABKAsyBi5QcmljZVIFcHJpY2USFAoFdGl0bGUYAyABKAlSBXRpdGxlEhgKB3RheFJhdGUYBCABKAFSB3RheFJhdGUSMAoPY29zdE9mR29vZHNTb2xkGAUgASgLMgYuUHJpY2VSD2Nvc3RPZkdvb2RzU29sZA==');
 @$core.Deprecated('Use orderLineItemShippingDetailsDescriptor instead')
 const OrderLineItemShippingDetails$json = const {
   '1': 'OrderLineItemShippingDetails',
