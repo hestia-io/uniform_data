@@ -117,6 +117,8 @@ message ProductSnippet {
   Price price = 6;
   Price salePrice = 7;
   Price costOfGoodsSold = 8;
+  string code = 9;
+  string categoryId = 10;
 }
 
 message ProductContentDetails {

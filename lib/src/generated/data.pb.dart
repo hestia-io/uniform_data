@@ -1297,6 +1297,8 @@ class ProductSnippet extends $pb.GeneratedMessage {
     ..aOM<Price>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'price', subBuilder: Price.create)
     ..aOM<Price>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'salePrice', protoName: 'salePrice', subBuilder: Price.create)
     ..aOM<Price>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'costOfGoodsSold', protoName: 'costOfGoodsSold', subBuilder: Price.create)
+    ..aOS(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'code')
+    ..aOS(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'categoryId', protoName: 'categoryId')
     ..hasRequiredFields = false
   ;
 
@@ -1310,6 +1312,8 @@ class ProductSnippet extends $pb.GeneratedMessage {
     Price? price,
     Price? salePrice,
     Price? costOfGoodsSold,
+    $core.String? code,
+    $core.String? categoryId,
   }) {
     final _result = create();
     if (title != null) {
@@ -1335,6 +1339,12 @@ class ProductSnippet extends $pb.GeneratedMessage {
     }
     if (costOfGoodsSold != null) {
       _result.costOfGoodsSold = costOfGoodsSold;
+    }
+    if (code != null) {
+      _result.code = code;
+    }
+    if (categoryId != null) {
+      _result.categoryId = categoryId;
     }
     return _result;
   }
@@ -1436,6 +1446,24 @@ class ProductSnippet extends $pb.GeneratedMessage {
   void clearCostOfGoodsSold() => clearField(8);
   @$pb.TagNumber(8)
   Price ensureCostOfGoodsSold() => $_ensure(7);
+
+  @$pb.TagNumber(9)
+  $core.String get code => $_getSZ(8);
+  @$pb.TagNumber(9)
+  set code($core.String v) { $_setString(8, v); }
+  @$pb.TagNumber(9)
+  $core.bool hasCode() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearCode() => clearField(9);
+
+  @$pb.TagNumber(10)
+  $core.String get categoryId => $_getSZ(9);
+  @$pb.TagNumber(10)
+  set categoryId($core.String v) { $_setString(9, v); }
+  @$pb.TagNumber(10)
+  $core.bool hasCategoryId() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearCategoryId() => clearField(10);
 }
 
 class ProductContentDetails extends $pb.GeneratedMessage {

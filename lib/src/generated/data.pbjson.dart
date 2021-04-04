@@ -250,11 +250,13 @@ const ProductSnippet$json = const {
     const {'1': 'price', '3': 6, '4': 1, '5': 11, '6': '.Price', '10': 'price'},
     const {'1': 'salePrice', '3': 7, '4': 1, '5': 11, '6': '.Price', '10': 'salePrice'},
     const {'1': 'costOfGoodsSold', '3': 8, '4': 1, '5': 11, '6': '.Price', '10': 'costOfGoodsSold'},
+    const {'1': 'code', '3': 9, '4': 1, '5': 9, '10': 'code'},
+    const {'1': 'categoryId', '3': 10, '4': 1, '5': 9, '10': 'categoryId'},
   ],
 };
 
 /// Descriptor for `ProductSnippet`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List productSnippetDescriptor = $convert.base64Decode('Cg5Qcm9kdWN0U25pcHBldBIUCgV0aXRsZRgBIAEoCVIFdGl0bGUSIAoLZGVzY3JpcHRpb24YAiABKAlSC2Rlc2NyaXB0aW9uEhIKBGxpbmsYAyABKAlSBGxpbmsSHAoJaW1hZ2VMaW5rGAQgASgJUglpbWFnZUxpbmsSIAoLaXRlbUdyb3VwSWQYBSABKAlSC2l0ZW1Hcm91cElkEhwKBXByaWNlGAYgASgLMgYuUHJpY2VSBXByaWNlEiQKCXNhbGVQcmljZRgHIAEoCzIGLlByaWNlUglzYWxlUHJpY2USMAoPY29zdE9mR29vZHNTb2xkGAggASgLMgYuUHJpY2VSD2Nvc3RPZkdvb2RzU29sZA==');
+final $typed_data.Uint8List productSnippetDescriptor = $convert.base64Decode('Cg5Qcm9kdWN0U25pcHBldBIUCgV0aXRsZRgBIAEoCVIFdGl0bGUSIAoLZGVzY3JpcHRpb24YAiABKAlSC2Rlc2NyaXB0aW9uEhIKBGxpbmsYAyABKAlSBGxpbmsSHAoJaW1hZ2VMaW5rGAQgASgJUglpbWFnZUxpbmsSIAoLaXRlbUdyb3VwSWQYBSABKAlSC2l0ZW1Hcm91cElkEhwKBXByaWNlGAYgASgLMgYuUHJpY2VSBXByaWNlEiQKCXNhbGVQcmljZRgHIAEoCzIGLlByaWNlUglzYWxlUHJpY2USMAoPY29zdE9mR29vZHNTb2xkGAggASgLMgYuUHJpY2VSD2Nvc3RPZkdvb2RzU29sZBISCgRjb2RlGAkgASgJUgRjb2RlEh4KCmNhdGVnb3J5SWQYCiABKAlSCmNhdGVnb3J5SWQ=');
 @$core.Deprecated('Use productContentDetailsDescriptor instead')
 const ProductContentDetails$json = const {
   '1': 'ProductContentDetails',
