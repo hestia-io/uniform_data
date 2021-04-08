@@ -413,3 +413,83 @@ const OrderListResponse$json = const {
 
 /// Descriptor for `OrderListResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List orderListResponseDescriptor = $convert.base64Decode('ChFPcmRlckxpc3RSZXNwb25zZRISCgRraW5kGAEgASgJUgRraW5kEhIKBGV0YWcYAiABKAlSBGV0YWcSJAoNbmV4dFBhZ2VUb2tlbhgDIAEoCVINbmV4dFBhZ2VUb2tlbhIkCg1wcmV2UGFnZVRva2VuGAQgASgJUg1wcmV2UGFnZVRva2VuEiUKCHBhZ2VJbmZvGAUgASgLMgkuUGFnZUluZm9SCHBhZ2VJbmZvEhwKBWl0ZW1zGAYgAygLMgYuT3JkZXJSBWl0ZW1z');
+@$core.Deprecated('Use videoSnippetDescriptor instead')
+const VideoSnippet$json = const {
+  '1': 'VideoSnippet',
+};
+
+/// Descriptor for `VideoSnippet`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List videoSnippetDescriptor = $convert.base64Decode('CgxWaWRlb1NuaXBwZXQ=');
+@$core.Deprecated('Use videoContentDetailsDescriptor instead')
+const VideoContentDetails$json = const {
+  '1': 'VideoContentDetails',
+};
+
+/// Descriptor for `VideoContentDetails`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List videoContentDetailsDescriptor = $convert.base64Decode('ChNWaWRlb0NvbnRlbnREZXRhaWxz');
+@$core.Deprecated('Use videoStatusDescriptor instead')
+const VideoStatus$json = const {
+  '1': 'VideoStatus',
+};
+
+/// Descriptor for `VideoStatus`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List videoStatusDescriptor = $convert.base64Decode('CgtWaWRlb1N0YXR1cw==');
+@$core.Deprecated('Use videoStatisticsDescriptor instead')
+const VideoStatistics$json = const {
+  '1': 'VideoStatistics',
+};
+
+/// Descriptor for `VideoStatistics`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List videoStatisticsDescriptor = $convert.base64Decode('Cg9WaWRlb1N0YXRpc3RpY3M=');
+@$core.Deprecated('Use videoSegmentDescriptor instead')
+const VideoSegment$json = const {
+  '1': 'VideoSegment',
+  '2': const [
+    const {'1': 'url', '3': 1, '4': 1, '5': 9, '10': 'url'},
+    const {'1': 'duration', '3': 2, '4': 1, '5': 9, '10': 'duration'},
+  ],
+};
+
+/// Descriptor for `VideoSegment`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List videoSegmentDescriptor = $convert.base64Decode('CgxWaWRlb1NlZ21lbnQSEAoDdXJsGAEgASgJUgN1cmwSGgoIZHVyYXRpb24YAiABKAlSCGR1cmF0aW9u');
+@$core.Deprecated('Use videoStreamDescriptor instead')
+const VideoStream$json = const {
+  '1': 'VideoStream',
+  '2': const [
+    const {'1': 'widthPixels', '3': 1, '4': 1, '5': 5, '10': 'widthPixels'},
+    const {'1': 'heightPixels', '3': 2, '4': 1, '5': 5, '10': 'heightPixels'},
+    const {'1': 'frameRateFps', '3': 3, '4': 1, '5': 5, '10': 'frameRateFps'},
+    const {'1': 'aspectRatio', '3': 4, '4': 1, '5': 5, '10': 'aspectRatio'},
+    const {'1': 'videoSegments', '3': 5, '4': 3, '5': 11, '6': '.VideoSegment', '10': 'videoSegments'},
+  ],
+};
+
+/// Descriptor for `VideoStream`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List videoStreamDescriptor = $convert.base64Decode('CgtWaWRlb1N0cmVhbRIgCgt3aWR0aFBpeGVscxgBIAEoBVILd2lkdGhQaXhlbHMSIgoMaGVpZ2h0UGl4ZWxzGAIgASgFUgxoZWlnaHRQaXhlbHMSIgoMZnJhbWVSYXRlRnBzGAMgASgFUgxmcmFtZVJhdGVGcHMSIAoLYXNwZWN0UmF0aW8YBCABKAVSC2FzcGVjdFJhdGlvEjMKDXZpZGVvU2VnbWVudHMYBSADKAsyDS5WaWRlb1NlZ21lbnRSDXZpZGVvU2VnbWVudHM=');
+@$core.Deprecated('Use videoFileDetailsDescriptor instead')
+const VideoFileDetails$json = const {
+  '1': 'VideoFileDetails',
+  '2': const [
+    const {'1': 'videoStreams', '3': 1, '4': 3, '5': 11, '6': '.VideoStream', '10': 'videoStreams'},
+  ],
+};
+
+/// Descriptor for `VideoFileDetails`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List videoFileDetailsDescriptor = $convert.base64Decode('ChBWaWRlb0ZpbGVEZXRhaWxzEjAKDHZpZGVvU3RyZWFtcxgBIAMoCzIMLlZpZGVvU3RyZWFtUgx2aWRlb1N0cmVhbXM=');
+@$core.Deprecated('Use videoDescriptor instead')
+const Video$json = const {
+  '1': 'Video',
+  '2': const [
+    const {'1': 'kind', '3': 1, '4': 1, '5': 9, '10': 'kind'},
+    const {'1': 'etag', '3': 2, '4': 1, '5': 9, '10': 'etag'},
+    const {'1': 'id', '3': 3, '4': 1, '5': 9, '10': 'id'},
+    const {'1': 'snippet', '3': 4, '4': 1, '5': 11, '6': '.VideoSnippet', '10': 'snippet'},
+    const {'1': 'contentDetails', '3': 5, '4': 1, '5': 11, '6': '.VideoContentDetails', '10': 'contentDetails'},
+    const {'1': 'status', '3': 6, '4': 1, '5': 11, '6': '.VideoStatus', '10': 'status'},
+    const {'1': 'statistics', '3': 7, '4': 1, '5': 11, '6': '.VideoStatistics', '10': 'statistics'},
+    const {'1': 'fileDetails', '3': 8, '4': 1, '5': 11, '6': '.VideoFileDetails', '10': 'fileDetails'},
+  ],
+};
+
+/// Descriptor for `Video`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List videoDescriptor = $convert.base64Decode('CgVWaWRlbxISCgRraW5kGAEgASgJUgRraW5kEhIKBGV0YWcYAiABKAlSBGV0YWcSDgoCaWQYAyABKAlSAmlkEicKB3NuaXBwZXQYBCABKAsyDS5WaWRlb1NuaXBwZXRSB3NuaXBwZXQSPAoOY29udGVudERldGFpbHMYBSABKAsyFC5WaWRlb0NvbnRlbnREZXRhaWxzUg5jb250ZW50RGV0YWlscxIkCgZzdGF0dXMYBiABKAsyDC5WaWRlb1N0YXR1c1IGc3RhdHVzEjAKCnN0YXRpc3RpY3MYByABKAsyEC5WaWRlb1N0YXRpc3RpY3NSCnN0YXRpc3RpY3MSMwoLZmlsZURldGFpbHMYCCABKAsyES5WaWRlb0ZpbGVEZXRhaWxzUgtmaWxlRGV0YWlscw==');

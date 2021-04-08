@@ -240,3 +240,46 @@ message OrderListResponse {
   PageInfo pageInfo = 5;  
   repeated Order items = 6;
 }
+
+/// Videos
+message VideoSnippet {
+}
+
+message VideoContentDetails {
+}
+
+message VideoStatus {
+}
+
+message VideoStatistics {
+}
+
+message VideoSegment {
+  string url = 1;
+  string duration = 2;
+}
+
+message VideoStream {
+  int32 widthPixels = 1;
+  int32 heightPixels = 2;
+  int32 frameRateFps = 3;
+  int32 aspectRatio = 4;
+  repeated VideoSegment videoSegments = 5;
+}
+
+message VideoFileDetails {
+  repeated VideoStream videoStreams = 1;
+}
+
+message Video {
+  string kind = 1;
+  string etag = 2;
+  string id = 3;
+  VideoSnippet snippet = 4;
+  VideoContentDetails contentDetails = 5;
+  VideoStatus status = 6;
+  VideoStatistics statistics = 7;
+  VideoFileDetails fileDetails = 8;
+}
+
+

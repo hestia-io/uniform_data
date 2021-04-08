@@ -2609,3 +2609,473 @@ class OrderListResponse extends $pb.GeneratedMessage {
   $core.List<Order> get items => $_getList(5);
 }
 
+class VideoSnippet extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'VideoSnippet', createEmptyInstance: create)
+    ..hasRequiredFields = false
+  ;
+
+  VideoSnippet._() : super();
+  factory VideoSnippet() => create();
+  factory VideoSnippet.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory VideoSnippet.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  VideoSnippet clone() => VideoSnippet()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  VideoSnippet copyWith(void Function(VideoSnippet) updates) => super.copyWith((message) => updates(message as VideoSnippet)) as VideoSnippet; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static VideoSnippet create() => VideoSnippet._();
+  VideoSnippet createEmptyInstance() => create();
+  static $pb.PbList<VideoSnippet> createRepeated() => $pb.PbList<VideoSnippet>();
+  @$core.pragma('dart2js:noInline')
+  static VideoSnippet getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<VideoSnippet>(create);
+  static VideoSnippet? _defaultInstance;
+}
+
+class VideoContentDetails extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'VideoContentDetails', createEmptyInstance: create)
+    ..hasRequiredFields = false
+  ;
+
+  VideoContentDetails._() : super();
+  factory VideoContentDetails() => create();
+  factory VideoContentDetails.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory VideoContentDetails.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  VideoContentDetails clone() => VideoContentDetails()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  VideoContentDetails copyWith(void Function(VideoContentDetails) updates) => super.copyWith((message) => updates(message as VideoContentDetails)) as VideoContentDetails; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static VideoContentDetails create() => VideoContentDetails._();
+  VideoContentDetails createEmptyInstance() => create();
+  static $pb.PbList<VideoContentDetails> createRepeated() => $pb.PbList<VideoContentDetails>();
+  @$core.pragma('dart2js:noInline')
+  static VideoContentDetails getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<VideoContentDetails>(create);
+  static VideoContentDetails? _defaultInstance;
+}
+
+class VideoStatus extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'VideoStatus', createEmptyInstance: create)
+    ..hasRequiredFields = false
+  ;
+
+  VideoStatus._() : super();
+  factory VideoStatus() => create();
+  factory VideoStatus.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory VideoStatus.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  VideoStatus clone() => VideoStatus()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  VideoStatus copyWith(void Function(VideoStatus) updates) => super.copyWith((message) => updates(message as VideoStatus)) as VideoStatus; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static VideoStatus create() => VideoStatus._();
+  VideoStatus createEmptyInstance() => create();
+  static $pb.PbList<VideoStatus> createRepeated() => $pb.PbList<VideoStatus>();
+  @$core.pragma('dart2js:noInline')
+  static VideoStatus getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<VideoStatus>(create);
+  static VideoStatus? _defaultInstance;
+}
+
+class VideoStatistics extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'VideoStatistics', createEmptyInstance: create)
+    ..hasRequiredFields = false
+  ;
+
+  VideoStatistics._() : super();
+  factory VideoStatistics() => create();
+  factory VideoStatistics.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory VideoStatistics.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  VideoStatistics clone() => VideoStatistics()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  VideoStatistics copyWith(void Function(VideoStatistics) updates) => super.copyWith((message) => updates(message as VideoStatistics)) as VideoStatistics; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static VideoStatistics create() => VideoStatistics._();
+  VideoStatistics createEmptyInstance() => create();
+  static $pb.PbList<VideoStatistics> createRepeated() => $pb.PbList<VideoStatistics>();
+  @$core.pragma('dart2js:noInline')
+  static VideoStatistics getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<VideoStatistics>(create);
+  static VideoStatistics? _defaultInstance;
+}
+
+class VideoSegment extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'VideoSegment', createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'url')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'duration')
+    ..hasRequiredFields = false
+  ;
+
+  VideoSegment._() : super();
+  factory VideoSegment({
+    $core.String? url,
+    $core.String? duration,
+  }) {
+    final _result = create();
+    if (url != null) {
+      _result.url = url;
+    }
+    if (duration != null) {
+      _result.duration = duration;
+    }
+    return _result;
+  }
+  factory VideoSegment.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory VideoSegment.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  VideoSegment clone() => VideoSegment()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  VideoSegment copyWith(void Function(VideoSegment) updates) => super.copyWith((message) => updates(message as VideoSegment)) as VideoSegment; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static VideoSegment create() => VideoSegment._();
+  VideoSegment createEmptyInstance() => create();
+  static $pb.PbList<VideoSegment> createRepeated() => $pb.PbList<VideoSegment>();
+  @$core.pragma('dart2js:noInline')
+  static VideoSegment getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<VideoSegment>(create);
+  static VideoSegment? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get url => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set url($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasUrl() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUrl() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get duration => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set duration($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasDuration() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearDuration() => clearField(2);
+}
+
+class VideoStream extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'VideoStream', createEmptyInstance: create)
+    ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'widthPixels', $pb.PbFieldType.O3, protoName: 'widthPixels')
+    ..a<$core.int>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'heightPixels', $pb.PbFieldType.O3, protoName: 'heightPixels')
+    ..a<$core.int>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'frameRateFps', $pb.PbFieldType.O3, protoName: 'frameRateFps')
+    ..a<$core.int>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'aspectRatio', $pb.PbFieldType.O3, protoName: 'aspectRatio')
+    ..pc<VideoSegment>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'videoSegments', $pb.PbFieldType.PM, protoName: 'videoSegments', subBuilder: VideoSegment.create)
+    ..hasRequiredFields = false
+  ;
+
+  VideoStream._() : super();
+  factory VideoStream({
+    $core.int? widthPixels,
+    $core.int? heightPixels,
+    $core.int? frameRateFps,
+    $core.int? aspectRatio,
+    $core.Iterable<VideoSegment>? videoSegments,
+  }) {
+    final _result = create();
+    if (widthPixels != null) {
+      _result.widthPixels = widthPixels;
+    }
+    if (heightPixels != null) {
+      _result.heightPixels = heightPixels;
+    }
+    if (frameRateFps != null) {
+      _result.frameRateFps = frameRateFps;
+    }
+    if (aspectRatio != null) {
+      _result.aspectRatio = aspectRatio;
+    }
+    if (videoSegments != null) {
+      _result.videoSegments.addAll(videoSegments);
+    }
+    return _result;
+  }
+  factory VideoStream.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory VideoStream.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  VideoStream clone() => VideoStream()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  VideoStream copyWith(void Function(VideoStream) updates) => super.copyWith((message) => updates(message as VideoStream)) as VideoStream; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static VideoStream create() => VideoStream._();
+  VideoStream createEmptyInstance() => create();
+  static $pb.PbList<VideoStream> createRepeated() => $pb.PbList<VideoStream>();
+  @$core.pragma('dart2js:noInline')
+  static VideoStream getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<VideoStream>(create);
+  static VideoStream? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.int get widthPixels => $_getIZ(0);
+  @$pb.TagNumber(1)
+  set widthPixels($core.int v) { $_setSignedInt32(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasWidthPixels() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearWidthPixels() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.int get heightPixels => $_getIZ(1);
+  @$pb.TagNumber(2)
+  set heightPixels($core.int v) { $_setSignedInt32(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasHeightPixels() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearHeightPixels() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.int get frameRateFps => $_getIZ(2);
+  @$pb.TagNumber(3)
+  set frameRateFps($core.int v) { $_setSignedInt32(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasFrameRateFps() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearFrameRateFps() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.int get aspectRatio => $_getIZ(3);
+  @$pb.TagNumber(4)
+  set aspectRatio($core.int v) { $_setSignedInt32(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasAspectRatio() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearAspectRatio() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.List<VideoSegment> get videoSegments => $_getList(4);
+}
+
+class VideoFileDetails extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'VideoFileDetails', createEmptyInstance: create)
+    ..pc<VideoStream>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'videoStreams', $pb.PbFieldType.PM, protoName: 'videoStreams', subBuilder: VideoStream.create)
+    ..hasRequiredFields = false
+  ;
+
+  VideoFileDetails._() : super();
+  factory VideoFileDetails({
+    $core.Iterable<VideoStream>? videoStreams,
+  }) {
+    final _result = create();
+    if (videoStreams != null) {
+      _result.videoStreams.addAll(videoStreams);
+    }
+    return _result;
+  }
+  factory VideoFileDetails.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory VideoFileDetails.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  VideoFileDetails clone() => VideoFileDetails()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  VideoFileDetails copyWith(void Function(VideoFileDetails) updates) => super.copyWith((message) => updates(message as VideoFileDetails)) as VideoFileDetails; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static VideoFileDetails create() => VideoFileDetails._();
+  VideoFileDetails createEmptyInstance() => create();
+  static $pb.PbList<VideoFileDetails> createRepeated() => $pb.PbList<VideoFileDetails>();
+  @$core.pragma('dart2js:noInline')
+  static VideoFileDetails getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<VideoFileDetails>(create);
+  static VideoFileDetails? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<VideoStream> get videoStreams => $_getList(0);
+}
+
+class Video extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Video', createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'kind')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'etag')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
+    ..aOM<VideoSnippet>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'snippet', subBuilder: VideoSnippet.create)
+    ..aOM<VideoContentDetails>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'contentDetails', protoName: 'contentDetails', subBuilder: VideoContentDetails.create)
+    ..aOM<VideoStatus>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'status', subBuilder: VideoStatus.create)
+    ..aOM<VideoStatistics>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'statistics', subBuilder: VideoStatistics.create)
+    ..aOM<VideoFileDetails>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'fileDetails', protoName: 'fileDetails', subBuilder: VideoFileDetails.create)
+    ..hasRequiredFields = false
+  ;
+
+  Video._() : super();
+  factory Video({
+    $core.String? kind,
+    $core.String? etag,
+    $core.String? id,
+    VideoSnippet? snippet,
+    VideoContentDetails? contentDetails,
+    VideoStatus? status,
+    VideoStatistics? statistics,
+    VideoFileDetails? fileDetails,
+  }) {
+    final _result = create();
+    if (kind != null) {
+      _result.kind = kind;
+    }
+    if (etag != null) {
+      _result.etag = etag;
+    }
+    if (id != null) {
+      _result.id = id;
+    }
+    if (snippet != null) {
+      _result.snippet = snippet;
+    }
+    if (contentDetails != null) {
+      _result.contentDetails = contentDetails;
+    }
+    if (status != null) {
+      _result.status = status;
+    }
+    if (statistics != null) {
+      _result.statistics = statistics;
+    }
+    if (fileDetails != null) {
+      _result.fileDetails = fileDetails;
+    }
+    return _result;
+  }
+  factory Video.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Video.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  Video clone() => Video()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Video copyWith(void Function(Video) updates) => super.copyWith((message) => updates(message as Video)) as Video; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static Video create() => Video._();
+  Video createEmptyInstance() => create();
+  static $pb.PbList<Video> createRepeated() => $pb.PbList<Video>();
+  @$core.pragma('dart2js:noInline')
+  static Video getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Video>(create);
+  static Video? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get kind => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set kind($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasKind() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearKind() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get etag => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set etag($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasEtag() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearEtag() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get id => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set id($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasId() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearId() => clearField(3);
+
+  @$pb.TagNumber(4)
+  VideoSnippet get snippet => $_getN(3);
+  @$pb.TagNumber(4)
+  set snippet(VideoSnippet v) { setField(4, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasSnippet() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearSnippet() => clearField(4);
+  @$pb.TagNumber(4)
+  VideoSnippet ensureSnippet() => $_ensure(3);
+
+  @$pb.TagNumber(5)
+  VideoContentDetails get contentDetails => $_getN(4);
+  @$pb.TagNumber(5)
+  set contentDetails(VideoContentDetails v) { setField(5, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasContentDetails() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearContentDetails() => clearField(5);
+  @$pb.TagNumber(5)
+  VideoContentDetails ensureContentDetails() => $_ensure(4);
+
+  @$pb.TagNumber(6)
+  VideoStatus get status => $_getN(5);
+  @$pb.TagNumber(6)
+  set status(VideoStatus v) { setField(6, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasStatus() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearStatus() => clearField(6);
+  @$pb.TagNumber(6)
+  VideoStatus ensureStatus() => $_ensure(5);
+
+  @$pb.TagNumber(7)
+  VideoStatistics get statistics => $_getN(6);
+  @$pb.TagNumber(7)
+  set statistics(VideoStatistics v) { setField(7, v); }
+  @$pb.TagNumber(7)
+  $core.bool hasStatistics() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearStatistics() => clearField(7);
+  @$pb.TagNumber(7)
+  VideoStatistics ensureStatistics() => $_ensure(6);
+
+  @$pb.TagNumber(8)
+  VideoFileDetails get fileDetails => $_getN(7);
+  @$pb.TagNumber(8)
+  set fileDetails(VideoFileDetails v) { setField(8, v); }
+  @$pb.TagNumber(8)
+  $core.bool hasFileDetails() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearFileDetails() => clearField(8);
+  @$pb.TagNumber(8)
+  VideoFileDetails ensureFileDetails() => $_ensure(7);
+}
+
