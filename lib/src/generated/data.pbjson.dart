@@ -446,12 +446,12 @@ const VideoSegment$json = const {
   '1': 'VideoSegment',
   '2': const [
     const {'1': 'url', '3': 1, '4': 1, '5': 9, '10': 'url'},
-    const {'1': 'duration', '3': 2, '4': 1, '5': 9, '10': 'duration'},
+    const {'1': 'durationMs', '3': 2, '4': 1, '5': 5, '10': 'durationMs'},
   ],
 };
 
 /// Descriptor for `VideoSegment`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List videoSegmentDescriptor = $convert.base64Decode('CgxWaWRlb1NlZ21lbnQSEAoDdXJsGAEgASgJUgN1cmwSGgoIZHVyYXRpb24YAiABKAlSCGR1cmF0aW9u');
+final $typed_data.Uint8List videoSegmentDescriptor = $convert.base64Decode('CgxWaWRlb1NlZ21lbnQSEAoDdXJsGAEgASgJUgN1cmwSHgoKZHVyYXRpb25NcxgCIAEoBVIKZHVyYXRpb25Ncw==');
 @$core.Deprecated('Use videoStreamDescriptor instead')
 const VideoStream$json = const {
   '1': 'VideoStream',

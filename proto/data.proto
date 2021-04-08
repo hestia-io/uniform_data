@@ -256,7 +256,7 @@ message VideoStatistics {
 
 message VideoSegment {
   string url = 1;
-  string duration = 2;
+  int32 durationMs = 2;
 }
 
 message VideoStream {

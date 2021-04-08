@@ -2728,21 +2728,21 @@ class VideoStatistics extends $pb.GeneratedMessage {
 class VideoSegment extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'VideoSegment', createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'url')
-    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'duration')
+    ..a<$core.int>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'durationMs', $pb.PbFieldType.O3, protoName: 'durationMs')
     ..hasRequiredFields = false
   ;
 
   VideoSegment._() : super();
   factory VideoSegment({
     $core.String? url,
-    $core.String? duration,
+    $core.int? durationMs,
   }) {
     final _result = create();
     if (url != null) {
       _result.url = url;
     }
-    if (duration != null) {
-      _result.duration = duration;
+    if (durationMs != null) {
+      _result.durationMs = durationMs;
     }
     return _result;
   }
@@ -2777,13 +2777,13 @@ class VideoSegment extends $pb.GeneratedMessage {
   void clearUrl() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.String get duration => $_getSZ(1);
+  $core.int get durationMs => $_getIZ(1);
   @$pb.TagNumber(2)
-  set duration($core.String v) { $_setString(1, v); }
+  set durationMs($core.int v) { $_setSignedInt32(1, v); }
   @$pb.TagNumber(2)
-  $core.bool hasDuration() => $_has(1);
+  $core.bool hasDurationMs() => $_has(1);
   @$pb.TagNumber(2)
-  void clearDuration() => clearField(2);
+  void clearDurationMs() => clearField(2);
 }
 
 class VideoStream extends $pb.GeneratedMessage {
