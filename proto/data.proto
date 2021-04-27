@@ -1,6 +1,20 @@
 syntax = 'proto3';
 
 /// Common
+message Thumbnail {
+  string url = 1;
+  int32 width = 2;
+  int32 height = 3;
+}
+
+message ThumbnailDetails {
+  Thumbnail normal = 1;
+  Thumbnail medium = 2;
+  Thumbnail high = 3;
+  Thumbnail standard = 4;
+  Thumbnail maxres = 5;
+}
+
 message PageInfo {
   int32 totalResults = 1;
   int32 resultsPerPage = 2;
@@ -192,6 +206,7 @@ message OrderSnippet {
   string customerId = 3;
   repeated OrderLineItem lineItems = 4;
   string placedDate = 5;
+  string merchantTitle = 6;
 }
 
 enum OrderPaymentStatus {
@@ -282,4 +297,33 @@ message Video {
   VideoFileDetails fileDetails = 8;
 }
 
+/// Games
+message GameSnippet {
+  string title = 1;
+  string color = 2;
+  string description = 3;
+  string publishedAt = 4;
+  ThumbnailDetails thumbnails = 5;
+}
+
+message GameBrandingSettings {
+  ThumbnailDetails bannerImage = 1;
+}
+
+message Game {
+  string kind = 1;
+  string etag = 2;
+  string id = 3;
+  GameSnippet snippet = 4; 
+  GameBrandingSettings brandingSettings = 5;
+}
+
+message GameListResponse {
+  string kind = 1;
+  string etag = 2;
+  string nextPageToken = 3;
+  string prevPageToken = 4;
+  PageInfo pageInfo = 5;
+  repeated Game items = 6;
+}
 

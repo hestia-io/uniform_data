@@ -39,6 +39,32 @@ const OrderOrderStatus$json = const {
 
 /// Descriptor for `OrderOrderStatus`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List orderOrderStatusDescriptor = $convert.base64Decode('ChBPcmRlck9yZGVyU3RhdHVzEgwKCGNhbmNlbGVkEAASDQoJZGVsaXZlcmVkEAESDgoKaW5Qcm9ncmVzcxACEhYKEnBhcnRpYWxseURlbGl2ZXJlZBADEhUKEXBhcnRpYWxseVJldHVybmVkEAQSFAoQcGFydGlhbGx5U2hpcHBlZBAFEhMKD3BlbmRpbmdTaGlwbWVudBAGEgwKCHJldHVybmVkEAcSCwoHc2hpcHBlZBAI');
+@$core.Deprecated('Use thumbnailDescriptor instead')
+const Thumbnail$json = const {
+  '1': 'Thumbnail',
+  '2': const [
+    const {'1': 'url', '3': 1, '4': 1, '5': 9, '10': 'url'},
+    const {'1': 'width', '3': 2, '4': 1, '5': 5, '10': 'width'},
+    const {'1': 'height', '3': 3, '4': 1, '5': 5, '10': 'height'},
+  ],
+};
+
+/// Descriptor for `Thumbnail`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List thumbnailDescriptor = $convert.base64Decode('CglUaHVtYm5haWwSEAoDdXJsGAEgASgJUgN1cmwSFAoFd2lkdGgYAiABKAVSBXdpZHRoEhYKBmhlaWdodBgDIAEoBVIGaGVpZ2h0');
+@$core.Deprecated('Use thumbnailDetailsDescriptor instead')
+const ThumbnailDetails$json = const {
+  '1': 'ThumbnailDetails',
+  '2': const [
+    const {'1': 'normal', '3': 1, '4': 1, '5': 11, '6': '.Thumbnail', '10': 'normal'},
+    const {'1': 'medium', '3': 2, '4': 1, '5': 11, '6': '.Thumbnail', '10': 'medium'},
+    const {'1': 'high', '3': 3, '4': 1, '5': 11, '6': '.Thumbnail', '10': 'high'},
+    const {'1': 'standard', '3': 4, '4': 1, '5': 11, '6': '.Thumbnail', '10': 'standard'},
+    const {'1': 'maxres', '3': 5, '4': 1, '5': 11, '6': '.Thumbnail', '10': 'maxres'},
+  ],
+};
+
+/// Descriptor for `ThumbnailDetails`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List thumbnailDetailsDescriptor = $convert.base64Decode('ChBUaHVtYm5haWxEZXRhaWxzEiIKBm5vcm1hbBgBIAEoCzIKLlRodW1ibmFpbFIGbm9ybWFsEiIKBm1lZGl1bRgCIAEoCzIKLlRodW1ibmFpbFIGbWVkaXVtEh4KBGhpZ2gYAyABKAsyCi5UaHVtYm5haWxSBGhpZ2gSJgoIc3RhbmRhcmQYBCABKAsyCi5UaHVtYm5haWxSCHN0YW5kYXJkEiIKBm1heHJlcxgFIAEoCzIKLlRodW1ibmFpbFIGbWF4cmVz');
 @$core.Deprecated('Use pageInfoDescriptor instead')
 const PageInfo$json = const {
   '1': 'PageInfo',
@@ -356,11 +382,12 @@ const OrderSnippet$json = const {
     const {'1': 'customerId', '3': 3, '4': 1, '5': 9, '10': 'customerId'},
     const {'1': 'lineItems', '3': 4, '4': 3, '5': 11, '6': '.OrderLineItem', '10': 'lineItems'},
     const {'1': 'placedDate', '3': 5, '4': 1, '5': 9, '10': 'placedDate'},
+    const {'1': 'merchantTitle', '3': 6, '4': 1, '5': 9, '10': 'merchantTitle'},
   ],
 };
 
 /// Descriptor for `OrderSnippet`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List orderSnippetDescriptor = $convert.base64Decode('CgxPcmRlclNuaXBwZXQSHgoKbWVyY2hhbnRJZBgBIAEoCVIKbWVyY2hhbnRJZBIoCg9tZXJjaGFudE9yZGVySWQYAiABKAlSD21lcmNoYW50T3JkZXJJZBIeCgpjdXN0b21lcklkGAMgASgJUgpjdXN0b21lcklkEiwKCWxpbmVJdGVtcxgEIAMoCzIOLk9yZGVyTGluZUl0ZW1SCWxpbmVJdGVtcxIeCgpwbGFjZWREYXRlGAUgASgJUgpwbGFjZWREYXRl');
+final $typed_data.Uint8List orderSnippetDescriptor = $convert.base64Decode('CgxPcmRlclNuaXBwZXQSHgoKbWVyY2hhbnRJZBgBIAEoCVIKbWVyY2hhbnRJZBIoCg9tZXJjaGFudE9yZGVySWQYAiABKAlSD21lcmNoYW50T3JkZXJJZBIeCgpjdXN0b21lcklkGAMgASgJUgpjdXN0b21lcklkEiwKCWxpbmVJdGVtcxgEIAMoCzIOLk9yZGVyTGluZUl0ZW1SCWxpbmVJdGVtcxIeCgpwbGFjZWREYXRlGAUgASgJUgpwbGFjZWREYXRlEiQKDW1lcmNoYW50VGl0bGUYBiABKAlSDW1lcmNoYW50VGl0bGU=');
 @$core.Deprecated('Use orderStatusDescriptor instead')
 const OrderStatus$json = const {
   '1': 'OrderStatus',
@@ -493,3 +520,56 @@ const Video$json = const {
 
 /// Descriptor for `Video`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List videoDescriptor = $convert.base64Decode('CgVWaWRlbxISCgRraW5kGAEgASgJUgRraW5kEhIKBGV0YWcYAiABKAlSBGV0YWcSDgoCaWQYAyABKAlSAmlkEicKB3NuaXBwZXQYBCABKAsyDS5WaWRlb1NuaXBwZXRSB3NuaXBwZXQSPAoOY29udGVudERldGFpbHMYBSABKAsyFC5WaWRlb0NvbnRlbnREZXRhaWxzUg5jb250ZW50RGV0YWlscxIkCgZzdGF0dXMYBiABKAsyDC5WaWRlb1N0YXR1c1IGc3RhdHVzEjAKCnN0YXRpc3RpY3MYByABKAsyEC5WaWRlb1N0YXRpc3RpY3NSCnN0YXRpc3RpY3MSMwoLZmlsZURldGFpbHMYCCABKAsyES5WaWRlb0ZpbGVEZXRhaWxzUgtmaWxlRGV0YWlscw==');
+@$core.Deprecated('Use gameSnippetDescriptor instead')
+const GameSnippet$json = const {
+  '1': 'GameSnippet',
+  '2': const [
+    const {'1': 'title', '3': 1, '4': 1, '5': 9, '10': 'title'},
+    const {'1': 'color', '3': 2, '4': 1, '5': 9, '10': 'color'},
+    const {'1': 'description', '3': 3, '4': 1, '5': 9, '10': 'description'},
+    const {'1': 'publishedAt', '3': 4, '4': 1, '5': 9, '10': 'publishedAt'},
+    const {'1': 'thumbnails', '3': 5, '4': 1, '5': 11, '6': '.ThumbnailDetails', '10': 'thumbnails'},
+  ],
+};
+
+/// Descriptor for `GameSnippet`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List gameSnippetDescriptor = $convert.base64Decode('CgtHYW1lU25pcHBldBIUCgV0aXRsZRgBIAEoCVIFdGl0bGUSFAoFY29sb3IYAiABKAlSBWNvbG9yEiAKC2Rlc2NyaXB0aW9uGAMgASgJUgtkZXNjcmlwdGlvbhIgCgtwdWJsaXNoZWRBdBgEIAEoCVILcHVibGlzaGVkQXQSMQoKdGh1bWJuYWlscxgFIAEoCzIRLlRodW1ibmFpbERldGFpbHNSCnRodW1ibmFpbHM=');
+@$core.Deprecated('Use gameBrandingSettingsDescriptor instead')
+const GameBrandingSettings$json = const {
+  '1': 'GameBrandingSettings',
+  '2': const [
+    const {'1': 'bannerImage', '3': 1, '4': 1, '5': 11, '6': '.ThumbnailDetails', '10': 'bannerImage'},
+  ],
+};
+
+/// Descriptor for `GameBrandingSettings`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List gameBrandingSettingsDescriptor = $convert.base64Decode('ChRHYW1lQnJhbmRpbmdTZXR0aW5ncxIzCgtiYW5uZXJJbWFnZRgBIAEoCzIRLlRodW1ibmFpbERldGFpbHNSC2Jhbm5lckltYWdl');
+@$core.Deprecated('Use gameDescriptor instead')
+const Game$json = const {
+  '1': 'Game',
+  '2': const [
+    const {'1': 'kind', '3': 1, '4': 1, '5': 9, '10': 'kind'},
+    const {'1': 'etag', '3': 2, '4': 1, '5': 9, '10': 'etag'},
+    const {'1': 'id', '3': 3, '4': 1, '5': 9, '10': 'id'},
+    const {'1': 'snippet', '3': 4, '4': 1, '5': 11, '6': '.GameSnippet', '10': 'snippet'},
+    const {'1': 'brandingSettings', '3': 5, '4': 1, '5': 11, '6': '.GameBrandingSettings', '10': 'brandingSettings'},
+  ],
+};
+
+/// Descriptor for `Game`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List gameDescriptor = $convert.base64Decode('CgRHYW1lEhIKBGtpbmQYASABKAlSBGtpbmQSEgoEZXRhZxgCIAEoCVIEZXRhZxIOCgJpZBgDIAEoCVICaWQSJgoHc25pcHBldBgEIAEoCzIMLkdhbWVTbmlwcGV0UgdzbmlwcGV0EkEKEGJyYW5kaW5nU2V0dGluZ3MYBSABKAsyFS5HYW1lQnJhbmRpbmdTZXR0aW5nc1IQYnJhbmRpbmdTZXR0aW5ncw==');
+@$core.Deprecated('Use gameListResponseDescriptor instead')
+const GameListResponse$json = const {
+  '1': 'GameListResponse',
+  '2': const [
+    const {'1': 'kind', '3': 1, '4': 1, '5': 9, '10': 'kind'},
+    const {'1': 'etag', '3': 2, '4': 1, '5': 9, '10': 'etag'},
+    const {'1': 'nextPageToken', '3': 3, '4': 1, '5': 9, '10': 'nextPageToken'},
+    const {'1': 'prevPageToken', '3': 4, '4': 1, '5': 9, '10': 'prevPageToken'},
+    const {'1': 'pageInfo', '3': 5, '4': 1, '5': 11, '6': '.PageInfo', '10': 'pageInfo'},
+    const {'1': 'items', '3': 6, '4': 3, '5': 11, '6': '.Game', '10': 'items'},
+  ],
+};
+
+/// Descriptor for `GameListResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List gameListResponseDescriptor = $convert.base64Decode('ChBHYW1lTGlzdFJlc3BvbnNlEhIKBGtpbmQYASABKAlSBGtpbmQSEgoEZXRhZxgCIAEoCVIEZXRhZxIkCg1uZXh0UGFnZVRva2VuGAMgASgJUg1uZXh0UGFnZVRva2VuEiQKDXByZXZQYWdlVG9rZW4YBCABKAlSDXByZXZQYWdlVG9rZW4SJQoIcGFnZUluZm8YBSABKAsyCS5QYWdlSW5mb1IIcGFnZUluZm8SGwoFaXRlbXMYBiADKAsyBS5HYW1lUgVpdGVtcw==');

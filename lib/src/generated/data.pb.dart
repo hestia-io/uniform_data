@@ -13,6 +13,194 @@ import 'data.pbenum.dart';
 
 export 'data.pbenum.dart';
 
+class Thumbnail extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Thumbnail', createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'url')
+    ..a<$core.int>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'width', $pb.PbFieldType.O3)
+    ..a<$core.int>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'height', $pb.PbFieldType.O3)
+    ..hasRequiredFields = false
+  ;
+
+  Thumbnail._() : super();
+  factory Thumbnail({
+    $core.String? url,
+    $core.int? width,
+    $core.int? height,
+  }) {
+    final _result = create();
+    if (url != null) {
+      _result.url = url;
+    }
+    if (width != null) {
+      _result.width = width;
+    }
+    if (height != null) {
+      _result.height = height;
+    }
+    return _result;
+  }
+  factory Thumbnail.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Thumbnail.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  Thumbnail clone() => Thumbnail()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Thumbnail copyWith(void Function(Thumbnail) updates) => super.copyWith((message) => updates(message as Thumbnail)) as Thumbnail; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static Thumbnail create() => Thumbnail._();
+  Thumbnail createEmptyInstance() => create();
+  static $pb.PbList<Thumbnail> createRepeated() => $pb.PbList<Thumbnail>();
+  @$core.pragma('dart2js:noInline')
+  static Thumbnail getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Thumbnail>(create);
+  static Thumbnail? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get url => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set url($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasUrl() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUrl() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.int get width => $_getIZ(1);
+  @$pb.TagNumber(2)
+  set width($core.int v) { $_setSignedInt32(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasWidth() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearWidth() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.int get height => $_getIZ(2);
+  @$pb.TagNumber(3)
+  set height($core.int v) { $_setSignedInt32(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasHeight() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearHeight() => clearField(3);
+}
+
+class ThumbnailDetails extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ThumbnailDetails', createEmptyInstance: create)
+    ..aOM<Thumbnail>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'normal', subBuilder: Thumbnail.create)
+    ..aOM<Thumbnail>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'medium', subBuilder: Thumbnail.create)
+    ..aOM<Thumbnail>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'high', subBuilder: Thumbnail.create)
+    ..aOM<Thumbnail>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'standard', subBuilder: Thumbnail.create)
+    ..aOM<Thumbnail>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'maxres', subBuilder: Thumbnail.create)
+    ..hasRequiredFields = false
+  ;
+
+  ThumbnailDetails._() : super();
+  factory ThumbnailDetails({
+    Thumbnail? normal,
+    Thumbnail? medium,
+    Thumbnail? high,
+    Thumbnail? standard,
+    Thumbnail? maxres,
+  }) {
+    final _result = create();
+    if (normal != null) {
+      _result.normal = normal;
+    }
+    if (medium != null) {
+      _result.medium = medium;
+    }
+    if (high != null) {
+      _result.high = high;
+    }
+    if (standard != null) {
+      _result.standard = standard;
+    }
+    if (maxres != null) {
+      _result.maxres = maxres;
+    }
+    return _result;
+  }
+  factory ThumbnailDetails.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ThumbnailDetails.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ThumbnailDetails clone() => ThumbnailDetails()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ThumbnailDetails copyWith(void Function(ThumbnailDetails) updates) => super.copyWith((message) => updates(message as ThumbnailDetails)) as ThumbnailDetails; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ThumbnailDetails create() => ThumbnailDetails._();
+  ThumbnailDetails createEmptyInstance() => create();
+  static $pb.PbList<ThumbnailDetails> createRepeated() => $pb.PbList<ThumbnailDetails>();
+  @$core.pragma('dart2js:noInline')
+  static ThumbnailDetails getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ThumbnailDetails>(create);
+  static ThumbnailDetails? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  Thumbnail get normal => $_getN(0);
+  @$pb.TagNumber(1)
+  set normal(Thumbnail v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasNormal() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearNormal() => clearField(1);
+  @$pb.TagNumber(1)
+  Thumbnail ensureNormal() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  Thumbnail get medium => $_getN(1);
+  @$pb.TagNumber(2)
+  set medium(Thumbnail v) { setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasMedium() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearMedium() => clearField(2);
+  @$pb.TagNumber(2)
+  Thumbnail ensureMedium() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  Thumbnail get high => $_getN(2);
+  @$pb.TagNumber(3)
+  set high(Thumbnail v) { setField(3, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasHigh() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearHigh() => clearField(3);
+  @$pb.TagNumber(3)
+  Thumbnail ensureHigh() => $_ensure(2);
+
+  @$pb.TagNumber(4)
+  Thumbnail get standard => $_getN(3);
+  @$pb.TagNumber(4)
+  set standard(Thumbnail v) { setField(4, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasStandard() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearStandard() => clearField(4);
+  @$pb.TagNumber(4)
+  Thumbnail ensureStandard() => $_ensure(3);
+
+  @$pb.TagNumber(5)
+  Thumbnail get maxres => $_getN(4);
+  @$pb.TagNumber(5)
+  set maxres(Thumbnail v) { setField(5, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasMaxres() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearMaxres() => clearField(5);
+  @$pb.TagNumber(5)
+  Thumbnail ensureMaxres() => $_ensure(4);
+}
+
 class PageInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'PageInfo', createEmptyInstance: create)
     ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'totalResults', $pb.PbFieldType.O3, protoName: 'totalResults')
@@ -2167,6 +2355,7 @@ class OrderSnippet extends $pb.GeneratedMessage {
     ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'customerId', protoName: 'customerId')
     ..pc<OrderLineItem>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'lineItems', $pb.PbFieldType.PM, protoName: 'lineItems', subBuilder: OrderLineItem.create)
     ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'placedDate', protoName: 'placedDate')
+    ..aOS(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'merchantTitle', protoName: 'merchantTitle')
     ..hasRequiredFields = false
   ;
 
@@ -2177,6 +2366,7 @@ class OrderSnippet extends $pb.GeneratedMessage {
     $core.String? customerId,
     $core.Iterable<OrderLineItem>? lineItems,
     $core.String? placedDate,
+    $core.String? merchantTitle,
   }) {
     final _result = create();
     if (merchantId != null) {
@@ -2193,6 +2383,9 @@ class OrderSnippet extends $pb.GeneratedMessage {
     }
     if (placedDate != null) {
       _result.placedDate = placedDate;
+    }
+    if (merchantTitle != null) {
+      _result.merchantTitle = merchantTitle;
     }
     return _result;
   }
@@ -2255,6 +2448,15 @@ class OrderSnippet extends $pb.GeneratedMessage {
   $core.bool hasPlacedDate() => $_has(4);
   @$pb.TagNumber(5)
   void clearPlacedDate() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.String get merchantTitle => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set merchantTitle($core.String v) { $_setString(5, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasMerchantTitle() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearMerchantTitle() => clearField(6);
 }
 
 class OrderStatus extends $pb.GeneratedMessage {
@@ -3077,5 +3279,379 @@ class Video extends $pb.GeneratedMessage {
   void clearFileDetails() => clearField(8);
   @$pb.TagNumber(8)
   VideoFileDetails ensureFileDetails() => $_ensure(7);
+}
+
+class GameSnippet extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GameSnippet', createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'title')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'color')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'description')
+    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'publishedAt', protoName: 'publishedAt')
+    ..aOM<ThumbnailDetails>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'thumbnails', subBuilder: ThumbnailDetails.create)
+    ..hasRequiredFields = false
+  ;
+
+  GameSnippet._() : super();
+  factory GameSnippet({
+    $core.String? title,
+    $core.String? color,
+    $core.String? description,
+    $core.String? publishedAt,
+    ThumbnailDetails? thumbnails,
+  }) {
+    final _result = create();
+    if (title != null) {
+      _result.title = title;
+    }
+    if (color != null) {
+      _result.color = color;
+    }
+    if (description != null) {
+      _result.description = description;
+    }
+    if (publishedAt != null) {
+      _result.publishedAt = publishedAt;
+    }
+    if (thumbnails != null) {
+      _result.thumbnails = thumbnails;
+    }
+    return _result;
+  }
+  factory GameSnippet.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GameSnippet.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  GameSnippet clone() => GameSnippet()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GameSnippet copyWith(void Function(GameSnippet) updates) => super.copyWith((message) => updates(message as GameSnippet)) as GameSnippet; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static GameSnippet create() => GameSnippet._();
+  GameSnippet createEmptyInstance() => create();
+  static $pb.PbList<GameSnippet> createRepeated() => $pb.PbList<GameSnippet>();
+  @$core.pragma('dart2js:noInline')
+  static GameSnippet getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GameSnippet>(create);
+  static GameSnippet? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get title => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set title($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasTitle() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearTitle() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get color => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set color($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasColor() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearColor() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get description => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set description($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasDescription() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearDescription() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get publishedAt => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set publishedAt($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasPublishedAt() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearPublishedAt() => clearField(4);
+
+  @$pb.TagNumber(5)
+  ThumbnailDetails get thumbnails => $_getN(4);
+  @$pb.TagNumber(5)
+  set thumbnails(ThumbnailDetails v) { setField(5, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasThumbnails() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearThumbnails() => clearField(5);
+  @$pb.TagNumber(5)
+  ThumbnailDetails ensureThumbnails() => $_ensure(4);
+}
+
+class GameBrandingSettings extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GameBrandingSettings', createEmptyInstance: create)
+    ..aOM<ThumbnailDetails>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'bannerImage', protoName: 'bannerImage', subBuilder: ThumbnailDetails.create)
+    ..hasRequiredFields = false
+  ;
+
+  GameBrandingSettings._() : super();
+  factory GameBrandingSettings({
+    ThumbnailDetails? bannerImage,
+  }) {
+    final _result = create();
+    if (bannerImage != null) {
+      _result.bannerImage = bannerImage;
+    }
+    return _result;
+  }
+  factory GameBrandingSettings.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GameBrandingSettings.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  GameBrandingSettings clone() => GameBrandingSettings()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GameBrandingSettings copyWith(void Function(GameBrandingSettings) updates) => super.copyWith((message) => updates(message as GameBrandingSettings)) as GameBrandingSettings; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static GameBrandingSettings create() => GameBrandingSettings._();
+  GameBrandingSettings createEmptyInstance() => create();
+  static $pb.PbList<GameBrandingSettings> createRepeated() => $pb.PbList<GameBrandingSettings>();
+  @$core.pragma('dart2js:noInline')
+  static GameBrandingSettings getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GameBrandingSettings>(create);
+  static GameBrandingSettings? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  ThumbnailDetails get bannerImage => $_getN(0);
+  @$pb.TagNumber(1)
+  set bannerImage(ThumbnailDetails v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasBannerImage() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearBannerImage() => clearField(1);
+  @$pb.TagNumber(1)
+  ThumbnailDetails ensureBannerImage() => $_ensure(0);
+}
+
+class Game extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Game', createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'kind')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'etag')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
+    ..aOM<GameSnippet>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'snippet', subBuilder: GameSnippet.create)
+    ..aOM<GameBrandingSettings>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'brandingSettings', protoName: 'brandingSettings', subBuilder: GameBrandingSettings.create)
+    ..hasRequiredFields = false
+  ;
+
+  Game._() : super();
+  factory Game({
+    $core.String? kind,
+    $core.String? etag,
+    $core.String? id,
+    GameSnippet? snippet,
+    GameBrandingSettings? brandingSettings,
+  }) {
+    final _result = create();
+    if (kind != null) {
+      _result.kind = kind;
+    }
+    if (etag != null) {
+      _result.etag = etag;
+    }
+    if (id != null) {
+      _result.id = id;
+    }
+    if (snippet != null) {
+      _result.snippet = snippet;
+    }
+    if (brandingSettings != null) {
+      _result.brandingSettings = brandingSettings;
+    }
+    return _result;
+  }
+  factory Game.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Game.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  Game clone() => Game()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Game copyWith(void Function(Game) updates) => super.copyWith((message) => updates(message as Game)) as Game; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static Game create() => Game._();
+  Game createEmptyInstance() => create();
+  static $pb.PbList<Game> createRepeated() => $pb.PbList<Game>();
+  @$core.pragma('dart2js:noInline')
+  static Game getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Game>(create);
+  static Game? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get kind => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set kind($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasKind() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearKind() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get etag => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set etag($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasEtag() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearEtag() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get id => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set id($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasId() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearId() => clearField(3);
+
+  @$pb.TagNumber(4)
+  GameSnippet get snippet => $_getN(3);
+  @$pb.TagNumber(4)
+  set snippet(GameSnippet v) { setField(4, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasSnippet() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearSnippet() => clearField(4);
+  @$pb.TagNumber(4)
+  GameSnippet ensureSnippet() => $_ensure(3);
+
+  @$pb.TagNumber(5)
+  GameBrandingSettings get brandingSettings => $_getN(4);
+  @$pb.TagNumber(5)
+  set brandingSettings(GameBrandingSettings v) { setField(5, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasBrandingSettings() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearBrandingSettings() => clearField(5);
+  @$pb.TagNumber(5)
+  GameBrandingSettings ensureBrandingSettings() => $_ensure(4);
+}
+
+class GameListResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GameListResponse', createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'kind')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'etag')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'nextPageToken', protoName: 'nextPageToken')
+    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'prevPageToken', protoName: 'prevPageToken')
+    ..aOM<PageInfo>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'pageInfo', protoName: 'pageInfo', subBuilder: PageInfo.create)
+    ..pc<Game>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'items', $pb.PbFieldType.PM, subBuilder: Game.create)
+    ..hasRequiredFields = false
+  ;
+
+  GameListResponse._() : super();
+  factory GameListResponse({
+    $core.String? kind,
+    $core.String? etag,
+    $core.String? nextPageToken,
+    $core.String? prevPageToken,
+    PageInfo? pageInfo,
+    $core.Iterable<Game>? items,
+  }) {
+    final _result = create();
+    if (kind != null) {
+      _result.kind = kind;
+    }
+    if (etag != null) {
+      _result.etag = etag;
+    }
+    if (nextPageToken != null) {
+      _result.nextPageToken = nextPageToken;
+    }
+    if (prevPageToken != null) {
+      _result.prevPageToken = prevPageToken;
+    }
+    if (pageInfo != null) {
+      _result.pageInfo = pageInfo;
+    }
+    if (items != null) {
+      _result.items.addAll(items);
+    }
+    return _result;
+  }
+  factory GameListResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GameListResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  GameListResponse clone() => GameListResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GameListResponse copyWith(void Function(GameListResponse) updates) => super.copyWith((message) => updates(message as GameListResponse)) as GameListResponse; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static GameListResponse create() => GameListResponse._();
+  GameListResponse createEmptyInstance() => create();
+  static $pb.PbList<GameListResponse> createRepeated() => $pb.PbList<GameListResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GameListResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GameListResponse>(create);
+  static GameListResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get kind => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set kind($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasKind() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearKind() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get etag => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set etag($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasEtag() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearEtag() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get nextPageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set nextPageToken($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasNextPageToken() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearNextPageToken() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get prevPageToken => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set prevPageToken($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasPrevPageToken() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearPrevPageToken() => clearField(4);
+
+  @$pb.TagNumber(5)
+  PageInfo get pageInfo => $_getN(4);
+  @$pb.TagNumber(5)
+  set pageInfo(PageInfo v) { setField(5, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasPageInfo() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearPageInfo() => clearField(5);
+  @$pb.TagNumber(5)
+  PageInfo ensurePageInfo() => $_ensure(4);
+
+  @$pb.TagNumber(6)
+  $core.List<Game> get items => $_getList(5);
 }
 
