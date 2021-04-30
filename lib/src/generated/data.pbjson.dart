@@ -334,11 +334,12 @@ const OrderLineItemProduct$json = const {
     const {'1': 'title', '3': 3, '4': 1, '5': 9, '10': 'title'},
     const {'1': 'taxRate', '3': 4, '4': 1, '5': 1, '10': 'taxRate'},
     const {'1': 'costOfGoodsSold', '3': 5, '4': 1, '5': 11, '6': '.Price', '10': 'costOfGoodsSold'},
+    const {'1': 'customAttributes', '3': 6, '4': 3, '5': 11, '6': '.CustomAttribute', '10': 'customAttributes'},
   ],
 };
 
 /// Descriptor for `OrderLineItemProduct`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List orderLineItemProductDescriptor = $convert.base64Decode('ChRPcmRlckxpbmVJdGVtUHJvZHVjdBIOCgJpZBgBIAEoCVICaWQSHAoFcHJpY2UYAiABKAsyBi5QcmljZVIFcHJpY2USFAoFdGl0bGUYAyABKAlSBXRpdGxlEhgKB3RheFJhdGUYBCABKAFSB3RheFJhdGUSMAoPY29zdE9mR29vZHNTb2xkGAUgASgLMgYuUHJpY2VSD2Nvc3RPZkdvb2RzU29sZA==');
+final $typed_data.Uint8List orderLineItemProductDescriptor = $convert.base64Decode('ChRPcmRlckxpbmVJdGVtUHJvZHVjdBIOCgJpZBgBIAEoCVICaWQSHAoFcHJpY2UYAiABKAsyBi5QcmljZVIFcHJpY2USFAoFdGl0bGUYAyABKAlSBXRpdGxlEhgKB3RheFJhdGUYBCABKAFSB3RheFJhdGUSMAoPY29zdE9mR29vZHNTb2xkGAUgASgLMgYuUHJpY2VSD2Nvc3RPZkdvb2RzU29sZBI8ChBjdXN0b21BdHRyaWJ1dGVzGAYgAygLMhAuQ3VzdG9tQXR0cmlidXRlUhBjdXN0b21BdHRyaWJ1dGVz');
 @$core.Deprecated('Use orderLineItemShippingDetailsDescriptor instead')
 const OrderLineItemShippingDetails$json = const {
   '1': 'OrderLineItemShippingDetails',

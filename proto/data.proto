@@ -176,6 +176,7 @@ message OrderLineItemProduct {
   string title = 3;
   double taxRate = 4;
   Price costOfGoodsSold = 5;
+  repeated CustomAttribute customAttributes = 6;
 }
 
 message OrderLineItemShippingDetails {

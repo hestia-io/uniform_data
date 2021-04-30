@@ -1952,6 +1952,7 @@ class OrderLineItemProduct extends $pb.GeneratedMessage {
     ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'title')
     ..a<$core.double>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'taxRate', $pb.PbFieldType.OD, protoName: 'taxRate')
     ..aOM<Price>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'costOfGoodsSold', protoName: 'costOfGoodsSold', subBuilder: Price.create)
+    ..pc<CustomAttribute>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'customAttributes', $pb.PbFieldType.PM, protoName: 'customAttributes', subBuilder: CustomAttribute.create)
     ..hasRequiredFields = false
   ;
 
@@ -1962,6 +1963,7 @@ class OrderLineItemProduct extends $pb.GeneratedMessage {
     $core.String? title,
     $core.double? taxRate,
     Price? costOfGoodsSold,
+    $core.Iterable<CustomAttribute>? customAttributes,
   }) {
     final _result = create();
     if (id != null) {
@@ -1978,6 +1980,9 @@ class OrderLineItemProduct extends $pb.GeneratedMessage {
     }
     if (costOfGoodsSold != null) {
       _result.costOfGoodsSold = costOfGoodsSold;
+    }
+    if (customAttributes != null) {
+      _result.customAttributes.addAll(customAttributes);
     }
     return _result;
   }
@@ -2050,6 +2055,9 @@ class OrderLineItemProduct extends $pb.GeneratedMessage {
   void clearCostOfGoodsSold() => clearField(5);
   @$pb.TagNumber(5)
   Price ensureCostOfGoodsSold() => $_ensure(4);
+
+  @$pb.TagNumber(6)
+  $core.List<CustomAttribute> get customAttributes => $_getList(5);
 }
 
 class OrderLineItemShippingDetails extends $pb.GeneratedMessage {
